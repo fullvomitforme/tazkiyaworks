@@ -1,6 +1,6 @@
 // components/BreakpointBadge.tsx
 import { useEffect, useState } from 'react';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/src/components/ui/badge';
 
 const BreakpointBadge: React.FC = () => {
 	const [breakpoint, setBreakpoint] = useState<string>('');

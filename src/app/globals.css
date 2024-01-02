@@ -74,21 +74,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-.main-text {
-  font-family:var(--font-neue-montreal);
-  font-weight: 300;
-  letter-spacing: -0.05px;
-  font-size: 2.313rem;
-  line-height: 3.75rem;
-  color: var(--text-primary);
-}
-
-.standout-text {
-  font-family:var(--font-editorial-new);
-  font-weight: 400;
-  letter-spacing: -0.05px;
-  font-size: 2.313rem;
-  line-height: 3.75rem;
-  color: #EF6D4D;
-}

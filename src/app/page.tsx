@@ -1,7 +1,7 @@
 'use client';
 
-import BreakpointBadge from '@/components/ui/BreakpointBadge';
-import MainCards from '@/components/MainCards';
+import BreakpointBadge from '@/src/components/ui/BreakpointBadge';
+import MainCards from '@/src/components/cards/MainCards';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 

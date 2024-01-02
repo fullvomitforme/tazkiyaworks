@@ -1,5 +1,5 @@
 import React from 'react';
-import TazkiyaWorksLogo from '@/components/ui/tazkiyaworks-logo';
+import TazkiyaWorksLogo from '@/src/components/ui/tazkiyaworks-logo';
 import Link from 'next/link';
 import MainNav from './MainNav';
 
