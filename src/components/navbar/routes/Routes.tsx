@@ -3,7 +3,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { useRouter, usePathname } from 'next/navigation';
 
-const MainNav = () => {
+const Routes = () => {
 	const router = useRouter();
 	const pathname = usePathname();
 
@@ -22,16 +22,15 @@ const MainNav = () => {
 	];
 
 	return (
-		<div className='flex space-x-8'>
+		<div className='space-x-3'>
 			{routes.map((route) => (
 				<Link
 					key={route.label}
 					href={route.href}
 					className={clsx(
-						'font-neueMontreal font-[500] uppercase leading-tight p-2 text-[1.5rem]',
+						'uppercase font-normal text-lg leading-tight tracking-widest px-2 py-1 hover:bg-red-200 hover:rounded-full transition-all duration-300 ease-in-out',
 						{
-							'bg-white bg-opacity-70 rounded-[32px] border border-black':
-								route.active,
+							'bg-red-400 rounded-full': route.active,
 						},
 					)}
 				>
@@ -42,4 +41,4 @@ const MainNav = () => {
 	);
 };
 
-export default MainNav;
+export default Routes;

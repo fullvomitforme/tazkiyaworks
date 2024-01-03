@@ -6,7 +6,7 @@ const TazkiyaWorksLogo = () => {
 	return (
 		<>
 			<Image
-				src={'/tazworks_logo.svg'}
+				src={'/logos/tazkiya-works-logo.svg'}
 				alt='Tazkiya Works Logo'
 				width={121}
 				height={63}

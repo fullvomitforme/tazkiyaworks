@@ -1,18 +1,15 @@
-import React from 'react';
 import TazkiyaWorksLogo from '@/src/components/ui/tazkiyaworks-logo';
 import Link from 'next/link';
-import MainNav from './MainNav';
+import Routes from '@/src/components/navbar/routes/Routes';
 
 const Navbar = () => {
 	return (
-		<nav className='flex items-center justify-center p-8 space-x-8 h-[15rem] my-15'>
-			<div>
-				<Link href={'/'}>
-					<TazkiyaWorksLogo />
-				</Link>
-			</div>
-			<div>
-				<MainNav />
+		<nav className='container flex flex-row justify-center items-center space-x-5 my-10'>
+			<Link href={'/'} className='p-2'>
+				<TazkiyaWorksLogo />
+			</Link>
+			<div className='p-2'>
+				<Routes />
 			</div>
 		</nav>
 	);

@@ -50,11 +50,11 @@ const PPEditorialNew = localFont({
 			weight: '300',
 		},
 		{
-			path: '../lib/static-fonts/PPEditorialNew-UltraBold.otf',
+			path: '../lib/static-fonts/PPEditorialNew-Ultrabold.otf',
 			weight: '800',
 		},
 		{
-			path: '../lib/static-fonts/PPEditorialNew-UltraBoldItalic.otf',
+			path: '../lib/static-fonts/PPEditorialNew-UltraboldItalic.otf',
 			weight: '800',
 		},
 		{
@@ -89,11 +89,8 @@ export default function RootLayout({
 					PPEditorialNew.variable,
 				)}
 			>
-				<div className='container'>
-					<Navbar />
-					{children}
-					<Footer />
-				</div>
+				<Navbar />
+				{children}
 			</body>
 		</html>
 	);
