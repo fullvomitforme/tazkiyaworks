@@ -29,63 +29,63 @@ const Footer = () => {
 		},
 	];
 	return (
-		<footer className='bg-jade h-[573px] m-[32px] rounded-[32px] flex flex-row items-center justify-center'>
-			<div className='flex flex-col items-start justify-start'>
-				<div className='m-[57px] flex flex-row items-start justify-between gap-[100px]'>
-					<div className='forwork'>
-						<h1 className='font-[500] text-[64px]'>for work</h1>
-						{works.map((work) => (
-							<Link
-								key={work.label}
-								href={work.link}
-								className='flex flex-col font-[500] text-[34px]'
-							>
-								{work.label}
-							</Link>
-						))}
+		<footer className='bg-orange-300 p-10'>
+			<div className='grid grid-cols-2'>
+				<div className='flex flex-col'>
+					<div className='flex flex-row gap-20'>
+						<div className='flex flex-col'>
+							<h1 className='font-medium text-4xl mb-2'>for work</h1>
+							{works.map((work) => (
+								<Link href={work.link} key={work.label}>
+									{work.label}
+								</Link>
+							))}
+						</div>
+						<div className='flex flex-col'>
+							<h1 className='font-medium text-4xl mb-2'>for talk</h1>
+							{talks.map((talk) => (
+								<Link href={talk.link} key={talk.label}>
+									{talk.label}
+								</Link>
+							))}
+						</div>
 					</div>
-					<div className='fortalk'>
-						<h1 className='font-[500] text-[64px]'>for talk</h1>
-						{talks.map((talk) => (
+					<div className='mt-auto'>
+						<h1 className='text-lg font-medium mb-2'>
+							© 2023 Tazkiya Mujahid. All Rights Reserved.
+						</h1>
+						<p className='text-sm font-normal'>
+							<br />
+							The content and works presented on this portfolio are the property
+							of Tazkiya Mujahid, unless otherwise noted.
+							<br />
+							Designed and developed with passion in Jakarta, Indonesia. Powered
+							by creativity, technology, and the pursuit of excellence.
+							<br />
+							For inquiries, collaborations, or just a friendly hello, feel free
+							to reach out at{' '}
 							<Link
-								key={talk.label}
-								href={talk.link}
-								className='flex flex-col font-[500] text-[34px]'
+								href={'mailto:tazkiyadigitalarchive@gmail.com'}
+								className='font-medium'
 							>
-								{talk.label}
+								tazkiyadigitalarchive[at]gmail.com
 							</Link>
-						))}
+							<br />
+							Thank you for visiting!
+						</p>
 					</div>
 				</div>
-				<div className='mx-[57px] my-[20px]'>
-					<h1 className='text-lg font-[500]'>
-						© 2023 Tazkiya Mujahid. All Rights Reserved.
-					</h1>
-					<p className='text-sm font-[500]'>
-						<br />
-						The content and works presented on this portfolio are the property
-						of Tazkiya Mujahid, unless otherwise noted.
-						<br />
-						Designed and developed with passion in Jakarta, Indonesia. Powered
-						by creativity, technology, and the pursuit of excellence.
-						<br />
-						For inquiries, collaborations, or just a friendly hello, feel free
-						to reach out at tazkiyadigitalarchive[at]gmail.com
-						<br />
-						Thank you for visiting!
-					</p>
+				<div className='m-auto'>
+					<Link href={'/'}>
+						<Image
+							src={'/logos/tazkiya-works-logo.svg'}
+							alt='tazlogo'
+							width={600}
+							height={0}
+							style={{ height: 'auto' }}
+						></Image>
+					</Link>
 				</div>
-			</div>
-			<div className='flex flex-row m-[32px]'>
-				<Link href={'/'}>
-					<Image
-						src={'/tazworks_logo.svg'}
-						alt='tazlogo'
-						width={600}
-						height={0}
-						style={{ height: 'auto' }}
-					></Image>
-				</Link>
 			</div>
 		</footer>
 	);

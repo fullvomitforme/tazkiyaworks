@@ -5,7 +5,7 @@ import Navbar from '@/src/components/navbar/Navbar';
 import localFont from 'next/font/local';
 import { cn } from '@/src/lib/utils';
 import BreakpointBadge from '@/src/components/ui/BreakpointBadge';
-import Footer from '../components/footer/Footer';
+import Footer from '@/src/components/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -91,6 +91,7 @@ export default function RootLayout({
 			>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
