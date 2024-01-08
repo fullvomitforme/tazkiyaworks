@@ -27,3 +27,30 @@ export const Works = [
 			'Dive into the QA insights at Ondelivery, ensuring impeccable standards in product excellence. Explore our meticulous approach to quality assurance, guaranteeing the delivery of seamless and reliable solutions. 🧐🛠️',
 	},
 ];
+
+export const Experiences = [
+	{
+		imageSrc: '/work/heulaulastudios.png',
+		company: 'Heulaula Studios',
+		position: 'Graphic Designer',
+		year: '2019',
+	},
+	{
+		imageSrc: '/work/jiexpo.png',
+		company: 'Jakarta International Expo (JIEXPO)',
+		position: 'Intern Graphic Designer',
+		year: '2022',
+	},
+	{
+		imageSrc: '/work/printcom.png',
+		company: 'PT. Printcom Solusi',
+		position: 'Intern Graphic Designer',
+		year: '2022',
+	},
+	{
+		imageSrc: '/work/onindonesia.png',
+		company: 'ON INDONESIA',
+		position: 'Quality Assurance Tester',
+		year: '2023',
+	},
+];

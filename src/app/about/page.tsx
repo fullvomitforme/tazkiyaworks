@@ -2,6 +2,7 @@ import RunningDesign from '@/src/components/ui/running-design/RunningDesign';
 import { buttonVariants } from '@/src/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import ExperienceCard from '@/src/components/about/experience-card/ExperienceCard';
 
 const AboutPage = () => {
 	return (
@@ -38,11 +39,16 @@ const AboutPage = () => {
 			<div className='container space-y-5'>
 				<div className='flex flex-row items-center justify-between'>
 					<p className='font-medium text-lg text-orange-400'>WORK</p>
-					<Link className={buttonVariants({ variant: 'default' })} href={'/'}>
+					<Link
+						className={buttonVariants({ variant: 'default' })}
+						href={
+							'https://tazkiyamujahid.notion.site/Tazkiya-Anafsi-Al-Mujahid-Resume-da37e36e6635439da6f41a64ffa02e00?pvs=4'
+						}
+					>
 						DOWNLOAD RESUME
 					</Link>
 				</div>
-				<div>
+				<div className='flex flex-col gap-5 items-center justify-center'>
 					<div className='border-2 border-orange-400 rounded-lg'>
 						<div className='flex flex-row p-5 items-center space-x-5'>
 							<Image
@@ -70,6 +76,9 @@ const AboutPage = () => {
 							</div>
 						</div>
 					</div>
+				</div>
+				<div className='pb-5'>
+					<ExperienceCard />
 				</div>
 			</div>
 		</section>
