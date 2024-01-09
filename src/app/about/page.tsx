@@ -36,7 +36,7 @@ const AboutPage = () => {
 			<div className='my-10'>
 				<RunningDesign />
 			</div>
-			<div className='container space-y-5'>
+			<div className='container space-y-5 min-h-[600px]'>
 				<div className='flex flex-row items-center justify-between'>
 					<p className='font-medium text-lg text-orange-400'>WORK</p>
 					<Link
@@ -77,7 +77,7 @@ const AboutPage = () => {
 						</div>
 					</div>
 				</div>
-				<div className='pb-5'>
+				<div className='pb-10'>
 					<ExperienceCard />
 				</div>
 			</div>

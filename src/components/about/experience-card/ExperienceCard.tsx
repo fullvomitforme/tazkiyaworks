@@ -13,9 +13,9 @@ const ExperienceCard = () => {
 						<Image
 							src={experience.imageSrc}
 							alt={experience.company}
-							width={67}
-							height={67}
-							className='rounded-lg'
+							width={89}
+							height={89}
+							className='rounded-lg mr-2'
 						/>
 						<div>
 							<h2 className='font-medium'>{experience.company}</h2>
