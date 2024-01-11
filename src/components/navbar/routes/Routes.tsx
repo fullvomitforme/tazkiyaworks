@@ -28,9 +28,9 @@ const Routes = () => {
 					key={route.label}
 					href={route.href}
 					className={clsx(
-						'uppercase font-normal text-lg leading-tight tracking-widest px-2 py-1 hover:bg-red-200 hover:rounded-full transition-all duration-300 ease-in-out',
+						'uppercase font-normal text-lg leading-tight tracking-widest px-3 py-1 hover:bg-highlight hover:rounded-full hover:text-white-smoke transition-all duration-300 ease-in-out',
 						{
-							'bg-red-400 rounded-full': route.active,
+							'bg-highlight rounded-full text-white-smoke': route.active,
 						},
 					)}
 				>
