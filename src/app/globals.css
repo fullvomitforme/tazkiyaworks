@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 60 3% 94%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -33,6 +33,29 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --lavender: #eae5ff;
+    --highlight: #003cc7;
+    --dark-slate-blue: #143881;
+    --royal-blue-highlight: #2862dd;
+    --white: white;
+    --dark-slate-grey: #3d3d3d;
+    --thistle: #cdc4f0;
+    --background: #eff7ff;
+    --alice-blue: #e4ecff;
+    --dark-slate-blue-2: #5d4c9c;
+    --cadet-blue: #41a1be;
+    --new-blue: #1152b3;
+    --silver: rgba(192, 192, 192, .5);
+    --pale-turquoise: #c4ece2;
+    --black: black;
+    --background-boxes: rgba(245, 245, 245, .46);
+    --lavender-2: #f6edff;
+    --cornflower-blue: #4f84ff;
+    --nav-background: rgba(233, 227, 204, .46);
+    --light-cyan: #e5fff8;
+    --teal: #176d86;
+    --white-smoke: whitesmoke;
   }
 
   .dark {
