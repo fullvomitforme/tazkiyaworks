@@ -6,6 +6,7 @@ import localFont from 'next/font/local';
 import { cn } from '@/src/lib/utils';
 import BreakpointBadge from '@/src/components/ui/BreakpointBadge';
 import Footer from '@/src/components/footer/Footer';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -73,6 +74,9 @@ export const metadata: Metadata = {
 	title: 'Tazkiya Mujahid | Your Favorites Destroyer',
 	description:
 		'Crafted with passion and precision, Tazkiya`s web portfolio reflects the seamless blend of technology and design. 🚀🎨',
+	icons: {
+		icon: '/favicon/favicon.svg',
+	},
 };
 
 export default function RootLayout({
