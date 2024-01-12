@@ -15,39 +15,59 @@ const config = {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
-				primary: {
+				'border': 'hsl(var(--border))',
+				'input': 'hsl(var(--input))',
+				'ring': 'hsl(var(--ring))',
+				'background': 'hsl(var(--background))',
+				'foreground': 'hsl(var(--foreground))',
+				'primary': {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
 				},
-				secondary: {
+				'secondary': {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
 				},
-				destructive: {
+				'destructive': {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))',
 				},
-				muted: {
+				'muted': {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))',
 				},
-				accent: {
+				'accent': {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))',
 				},
-				popover: {
+				'popover': {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))',
 				},
-				card: {
+				'card': {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
+				'lavender': 'var(--lavender)',
+				'highlight': 'var(--highlight)',
+				'dark-slate-blue': 'var(--dark-slate-blue)',
+				'royal-blue-highlight': 'var(--royal-blue-highlight)',
+				'white': 'var(--white)',
+				'dark-slate-grey': 'var(--dark-slate-grey)',
+				'thistle': 'var(--thistle)',
+				'alice-blue': 'var(--alice-blue)',
+				'dark-slate-blue-2': 'var(--dark-slate-blue-2)',
+				'cadet-blue': 'var(--cadet-blue)',
+				'new-blue': 'var(--new-blue)',
+				'silver': 'var(--silver)',
+				'pale-turquoise': 'var(--pale-turquoise)',
+				'background-boxes': 'var(--background-boxes)',
+				'lavender-2': 'var(--lavender-2)',
+				'cornflower-blue': 'var(--cornflower-blue)',
+				'nav-background': 'var(--nav-background)',
+				'light-cyan': 'var(--light-cyan)',
+				'teal': 'var(--teal)',
+				'white-smoke': 'var(--white-smoke)',
 			},
 			fontFamily: {
 				neueMontreal: ['var(--font-neue-montreal)', 'sans-serif'],
