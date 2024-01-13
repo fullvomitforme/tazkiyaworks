@@ -22,7 +22,7 @@ const Routes = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center space-y-5 p-4'>
+    <div className='flex flex-col items-center justify-center space-y-5 p-4 md:flex-row md:space-x-10 md:space-y-0'>
       {routes.map((route) => (
         <Link
           key={route.label}

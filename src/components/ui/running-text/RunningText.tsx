@@ -1,17 +1,25 @@
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
+import RunningTextTazkiya from '@/public/logos/running-text-tazkiya-works.png';
+import TazkiyaWorks from '@/public/marquee/tazkiya_works.png';
+import Earth from '@/public/marquee/earth.png';
 
 const RunningText = () => {
   return (
-    <Marquee speed={30}>
-      <Image
-        src={'/logos/running-text-tazkiya-works.png'}
-        alt='Alt Text for Running Text Tazkiya Works Logo Image Marquee Animation Effect'
-        width={2672}
-        height={150}
-        className='p-2'
-      />
-    </Marquee>
+    <div className='border-y-2 border-new-blue'>
+      <Marquee speed={40} autoFill>
+        <Image
+          src={TazkiyaWorks}
+          alt='Running Text Tazkiya Works Logo Image Marquee Animation Effect'
+          className='m-5 flex cursor-pointer'
+        />
+        <Image
+          src={Earth}
+          alt='Running Text Tazkiya Works Logo Image Marquee Animation Effect'
+          className='m-5 flex cursor-pointer'
+        />
+      </Marquee>
+    </div>
   );
 };
 
