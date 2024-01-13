@@ -4,4 +4,4 @@ All rights reserved. This portfolio and its content are the intellectual propert
 
 ---
 
-*Last updated: January 2024*
+_Last updated: January 2024_

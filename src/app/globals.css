@@ -46,13 +46,13 @@
     --dark-slate-blue-2: #5d4c9c;
     --cadet-blue: #41a1be;
     --new-blue: #1152b3;
-    --silver: rgba(192, 192, 192, .5);
+    --silver: rgba(192, 192, 192, 0.5);
     --pale-turquoise: #c4ece2;
     --black: black;
-    --background-boxes: rgba(245, 245, 245, .46);
+    --background-boxes: rgba(245, 245, 245, 0.46);
     --lavender-2: #f6edff;
     --cornflower-blue: #4f84ff;
-    --nav-background: rgba(233, 227, 204, .46);
+    --nav-background: rgba(233, 227, 204, 0.46);
     --light-cyan: #e5fff8;
     --teal: #176d86;
     --white-smoke: whitesmoke;
