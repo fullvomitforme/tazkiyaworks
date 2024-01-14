@@ -47,10 +47,10 @@ export default function Work() {
           </p>
         </div>
       </div>
-      <RunningText />
-      <div className='container'>
+      {/* <RunningText /> */}
+      {/* <div className='container'>
         <MainCards />
-      </div>
+      </div> */}
     </main>
   );
 }

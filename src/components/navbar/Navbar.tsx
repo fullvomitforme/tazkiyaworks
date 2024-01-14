@@ -27,6 +27,7 @@ const Navbar = () => {
                 alt='Never Gonna Give You Up'
                 sizes='10vw'
                 style={{ width: '100%', height: 'auto' }}
+                priority={true}
               />
             </Link>
             <div className='hidden md:inline-block'>
