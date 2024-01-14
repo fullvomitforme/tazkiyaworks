@@ -47,7 +47,9 @@ export default function Work() {
           </p>
         </div>
       </div>
-      {/* <RunningText /> */}
+      <div className='my-5 py-5'>
+        <RunningText />
+      </div>
       {/* <div className='container'>
         <MainCards />
       </div> */}

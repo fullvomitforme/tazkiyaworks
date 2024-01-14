@@ -78,7 +78,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className='absolute left-[250px] top-[23%] translate-y-[-23%] transform'>
+      <div className='absolute left-[250px] top-[23%] translate-y-[-23%] transform p-4'>
         <Image src={Sprinkle} alt='sprinkle!' />
       </div>
     </footer>
