@@ -18,8 +18,8 @@ export default function Work() {
           priority={true}
         ></Image>
       </div>
-      <div className='container flex items-center justify-center p-4'>
-        <div className='space-y-2 text-sm font-normal leading-relaxed'>
+      <div className='container flex items-center justify-center p-4 md:p-9'>
+        <div className='space-y-2 text-sm font-normal leading-relaxed md:space-y-5 md:text-3xl'>
           <p>
             I&apos;m Tazkiya Mujahid, a craftsman of{' '}
             <span className='font-editorialNew text-highlight'>
@@ -47,10 +47,10 @@ export default function Work() {
           </p>
         </div>
       </div>
-      <RunningText />
-      <div className='container'>
+      {/* <RunningText /> */}
+      {/* <div className='container'>
         <MainCards />
-      </div>
+      </div> */}
     </main>
   );
 }
