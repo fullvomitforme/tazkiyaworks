@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Marquee from 'react-fast-marquee';
+import Sprinkle from '@/public/acc/sprinkle.png';
 
 const Footer = () => {
   const works = [
@@ -29,63 +29,57 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className='bg-orange-300 p-10'>
-      <div className='grid grid-cols-2'>
-        <div className='flex flex-col'>
-          <div className='flex flex-row gap-20'>
-            <div className='flex flex-col'>
-              <h1 className='mb-2 text-4xl font-medium'>for work</h1>
-              {works.map((work) => (
-                <Link href={work.link} key={work.label}>
-                  {work.label}
-                </Link>
-              ))}
-            </div>
-            <div className='flex flex-col'>
-              <h1 className='mb-2 text-4xl font-medium'>for talk</h1>
-              {talks.map((talk) => (
-                <Link href={talk.link} key={talk.label}>
-                  {talk.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className='mt-auto'>
-            <h1 className='mb-2 text-lg font-medium'>
-              © 2023 Tazkiya Mujahid. All Rights Reserved.
-            </h1>
-            <p className='text-sm font-normal'>
-              <br />
-              The content and works presented on this portfolio are the property
-              of Tazkiya Mujahid, unless otherwise noted.
-              <br />
-              Designed and developed with passion in Jakarta, Indonesia. Powered
-              by creativity, technology, and the pursuit of excellence.
-              <br />
-              For inquiries, collaborations, or just a friendly hello, feel free
-              to reach out at{' '}
+    <footer className='relative m-4 rounded-lg bg-highlight p-4 text-white-smoke'>
+      <div className='flex flex-col space-y-5'>
+        <div className='flex flex-row space-x-10'>
+          <div className='forwork'>
+            <h1 className='text-xl font-bold'>for work</h1>
+            {works.map((work) => (
               <Link
-                href={'mailto:tazkiyadigitalarchive@gmail.com'}
-                className='font-medium'
+                key={work.label}
+                href={work.link}
+                className='flex flex-col text-sm'
               >
-                tazkiyadigitalarchive[at]gmail.com
+                {work.label}
               </Link>
-              <br />
-              Thank you for visiting!
-            </p>
+            ))}
+          </div>
+          <div className='fortalk'>
+            <h1 className='text-xl font-bold'>for talk</h1>
+            {talks.map((talk) => (
+              <Link
+                key={talk.label}
+                href={talk.link}
+                className='flex flex-col text-sm'
+              >
+                {talk.label}
+              </Link>
+            ))}
           </div>
         </div>
-        <div className='m-auto'>
-          <Link href={'/'}>
-            <Image
-              src={'/logos/tazkiya-works-logo.svg'}
-              alt='tazlogo'
-              width={600}
-              height={0}
-              style={{ height: 'auto' }}
-            ></Image>
-          </Link>
+        <div className='flex flex-col space-y-5'>
+          <h2 className='text-[11px] font-bold'>
+            © 2024 Tazkiya Mujahid. All Rights Reserved.
+          </h2>
+          <p className='text-[11px]'>
+            The content and works presented on this portfolio are the property
+            of Tazkiya Mujahid, unless otherwise noted. Designed and developed
+            with passion in Jakarta, Indonesia. Powered by creativity,
+            technology, and the pursuit of excellence. For inquiries,
+            collaborations, or just a friendly hello, feel free to reach out at{' '}
+            <Link
+              href={'mailto:tazkiyadigitalarchive@gmail.com'}
+              className='inline-block font-bold'
+            >
+              tazkiyadigitalarchive[at]gmail.com
+            </Link>{' '}
+            <br />
+            Thank you for your stay!
+          </p>
         </div>
+      </div>
+      <div className='absolute left-[250px] top-[23%] translate-y-[-23%] transform'>
+        <Image src={Sprinkle} alt='sprinkle!' />
       </div>
     </footer>
   );
