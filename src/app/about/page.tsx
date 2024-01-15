@@ -3,11 +3,15 @@ import { buttonVariants } from '@/src/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import ExperienceCard from '@/src/components/about/experience-card/ExperienceCard';
+import WorkinProgress from '@/public/logos/workinprogress.png';
 
 const AboutPage = () => {
   return (
-    <section>
-      <div className='container'>
+    <section className='container mx-auto p-4'>
+      <div className='flex items-center justify-center'>
+        <Image src={WorkinProgress} alt='Work in Progress' sizes='100vw' />
+      </div>
+      {/* <div className='container'>
         <div className='space-y-5'>
           <h2 className='text-lg font-medium text-orange-400'>GTKM</h2>
           <p className='text-xl font-medium leading-relaxed'>
@@ -80,7 +84,7 @@ const AboutPage = () => {
         <div className='pb-10'>
           <ExperienceCard />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

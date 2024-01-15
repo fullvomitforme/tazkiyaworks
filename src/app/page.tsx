@@ -50,9 +50,9 @@ export default function Work() {
       <div className='my-5 py-5'>
         <RunningText />
       </div>
-      {/* <div className='container'>
+      <div className='container'>
         <MainCards />
-      </div> */}
+      </div>
     </main>
   );
 }
