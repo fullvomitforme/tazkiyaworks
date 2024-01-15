@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/src/components/ui/badge';
 
-interface WorksCardProps {
+export interface WorksCardProps {
   number: string;
   tag: 'reflection' | 'casestudy' | 'underconstruction';
   position: string;

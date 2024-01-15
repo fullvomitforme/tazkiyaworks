@@ -1,7 +1,7 @@
 export const Works = [
   {
     number: '01',
-    tag: 'casestudy',
+    tag: 'casestudy' as const,
     position: 'Graphic Designer',
     company: 'Heulaulastudios',
     caseStudyLink: '/work/heulaulastudios',
@@ -11,7 +11,7 @@ export const Works = [
   },
   {
     number: '02',
-    tag: 'reflection',
+    tag: 'reflection' as const,
     position: 'UI/UX Designer',
     company: 'E-Bank Inc.',
     caseStudyLink: '🕺🏻 FULL CASE STUDY!',
@@ -21,7 +21,7 @@ export const Works = [
   },
   {
     number: '03',
-    tag: 'underconstruction',
+    tag: 'underconstruction' as const,
     position: 'Quality Assurance',
     company: 'On Indonesia',
     caseStudyLink: '🕺🏻 FULL CASE STUDY!',
