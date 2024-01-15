@@ -1,4 +1,4 @@
-import WorksCard from './WorkCards';
+import WorksCard, { WorksCardProps } from './WorkCards';
 import { Works } from '@/src/lib/data';
 
 const MainCards = () => {
