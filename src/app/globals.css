@@ -56,6 +56,9 @@
     --light-cyan: #e5fff8;
     --teal: #176d86;
     --white-smoke: whitesmoke;
+    --dark-green: #2a7c53;
+    --sweet-orange: #FFA928;
+    --background-study-case: rgba(255, 255, 255, 0.109);
   }
 
   .dark {

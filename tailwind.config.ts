@@ -68,6 +68,9 @@ const config = {
         'light-cyan': 'var(--light-cyan)',
         teal: 'var(--teal)',
         'white-smoke': 'var(--white-smoke)',
+        'dark-green': 'var(--dark-green)',
+        'sweet-orange': 'var(--sweet-orange)',
+        'background-study-case': 'var(--background-study-case)',
       },
       fontFamily: {
         neueMontreal: ['var(--font-neue-montreal)', 'sans-serif'],

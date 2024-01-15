@@ -36,7 +36,7 @@ const BreakpointBadge: React.FC = () => {
 
   return (
     <Badge
-      variant='destructive'
+      variant='casestudy'
       className='fixed bottom-10 left-10 z-20 text-2xl'
     >
       🔎 breakpoint: {breakpoint} and screensize: {windowWidth} px
