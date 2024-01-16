@@ -14,7 +14,7 @@ export const Works = [
     tag: 'reflection' as const,
     position: 'UI/UX Designer',
     company: 'E-Bank Inc.',
-    caseStudyLink: '🕺🏻 FULL CASE STUDY!',
+    caseStudyLink: '/work/ebank',
     imageSrc: '/work/ebank_work.jpg',
     description:
       'Explore E-Bank Inc. design showcase—an innovative blend of brand identity, art direction, and graphic design. Witness our commitment to creative and functional web solutions. 🌐🚀',
@@ -24,7 +24,7 @@ export const Works = [
     tag: 'underconstruction' as const,
     position: 'Quality Assurance',
     company: 'On Indonesia',
-    caseStudyLink: '🕺🏻 FULL CASE STUDY!',
+    caseStudyLink: '/work/onindonesia',
     imageSrc: '/work/onindonesia_work.jpg',
     description:
       'Dive into the QA insights at Ondelivery, ensuring impeccable standards in product excellence. Explore our meticulous approach to quality assurance, guaranteeing the delivery of seamless and reliable solutions. 🧐🛠️',

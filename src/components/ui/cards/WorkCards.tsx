@@ -55,6 +55,7 @@ const WorksCard: React.FC<WorksCardProps> = ({
           width={500}
           height={300}
           className='my-5 rounded-lg'
+          priority
         />
         <div className='mb-4 text-lg'>
           <span className='font-medium'>{position} @</span>
