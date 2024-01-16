@@ -28,9 +28,10 @@ const Routes = () => {
           key={route.label}
           href={route.href}
           className={clsx(
-            'w-full px-3 py-1 text-center text-lg font-normal uppercase leading-tight tracking-widest transition-all duration-300 ease-in-out hover:rounded-full hover:bg-highlight hover:text-white-smoke',
+            'w-full px-3 py-1 text-center text-lg font-normal uppercase leading-tight tracking-widest shadow-2xl shadow-blue-500/20 transition-all duration-200 ease-in-out hover:rounded-full hover:bg-highlight hover:text-white-smoke',
             {
-              'rounded-full bg-highlight text-white-smoke': route.active,
+              'rounded-full bg-highlight text-white-smoke hover:shadow-2xl hover:shadow-blue-500/20':
+                route.active,
             }
           )}
         >

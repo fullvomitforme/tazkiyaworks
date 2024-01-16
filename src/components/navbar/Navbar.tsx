@@ -1,5 +1,4 @@
 'use client';
-import TazkiyaWorksLogo from '@/src/components/ui/tazkiyaworks-logo';
 import Link from 'next/link';
 import Routes from '@/src/components/navbar/routes/Routes';
 import Image from 'next/image';
@@ -9,7 +8,8 @@ import Emojiest from '@/public/logos/emojiest.png';
 
 const Navbar = () => {
   const [isClick, setIsClick] = useState(false);
-  const toogleNavbar = () => {
+
+  const toggleNavbar = () => {
     setIsClick(!isClick);
   };
 
@@ -36,16 +36,22 @@ const Navbar = () => {
           </div>
 
           <button
-            onClick={toogleNavbar}
+            onClick={toggleNavbar}
             className='transition-all duration-300 ease-in-out md:hidden'
-            aria-label='Toogle Navigation'
+            aria-label='Toggle Navigation'
           >
-            {isClick ? <X /> : <Menu />}
+            {isClick ? (
+              <div className='shadow-2xl shadow-blue-500/20'>
+                <X />{' '}
+              </div>
+            ) : (
+              <Menu />
+            )}
           </button>
         </div>
       </div>
       {isClick && (
-        <div className='border-gray-100bg-nav-background absolute left-0 right-0 top-[100px] w-full rounded-md bg-opacity-30 bg-clip-padding p-4 backdrop-blur-md backdrop-filter'>
+        <div className='absolute left-0 right-0 top-[100px] w-full rounded-md bg-opacity-30 bg-clip-padding p-4 backdrop-blur-md backdrop-filter md:hidden'>
           <Routes />
         </div>
       )}
