@@ -3,7 +3,7 @@ import MainCards from '../components/ui/cards/MainCards';
 import Image from 'next/image';
 import TazkiyaWorksLogo from '@/public/logos/tazkiya_works.png';
 
-export default function Work() {
+export default async function Work() {
   return (
     <main className='flex flex-col items-center justify-center space-y-10'>
       <div className='p-4'>
@@ -15,7 +15,7 @@ export default function Work() {
             height: 'auto',
           }}
           alt='fuck around and find out'
-          priority={true}
+          priority
         ></Image>
       </div>
       <div className='container flex items-center justify-center p-4 md:p-9'>

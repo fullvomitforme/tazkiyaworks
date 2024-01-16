@@ -17,6 +17,7 @@
     "gsap": "^3.12.4",
     "lucide-react": "^0.302.0",
     "next": "14.0.4",
+    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.2",
