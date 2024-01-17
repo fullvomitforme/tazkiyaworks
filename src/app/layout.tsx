@@ -7,6 +7,7 @@ import { cn } from '@/src/lib/utils';
 import BreakpointBadge from '@/src/components/ui/BreakpointBadge';
 import Footer from '@/src/components/footer/Footer';
 import Head from 'next/head';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -96,6 +97,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
