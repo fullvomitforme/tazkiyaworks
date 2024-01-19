@@ -57,3 +57,18 @@ export const Experiences = [
     year: '2023',
   },
 ];
+
+
+export const ImageHeulaulastudios = [
+  'beer_pesta.jpg',
+  'mayday.jpg',
+  'mitski_bug.jpg',
+  'mitski_husband.jpg',
+  'nugas.jpg',
+  'pemudagila.jpg',
+  'pesta_hari_akhir.jpg',
+  'sailorfight.jpg',
+  'soundsfrommerdeka.jpg',
+  'sunwave_leftmeotu.jpg',
+  'uas_week.jpg',
+];
