@@ -14,6 +14,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@studio-freight/lenis": "^1.0.33",
     "@vercel/speed-insights": "^1.0.4",
+    "blaze-slider": "^1.9.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.18.0",
