@@ -50,7 +50,10 @@ export default async function Work() {
       <div className='my-5 py-5'>
         <RunningText />
       </div>
-      <div className='container'>
+      <div className='container p-4'>
+        <h2 className='p-4 text-lg font-medium uppercase leading-relaxed tracking-wider text-highlight'>
+          Project
+        </h2>
         <MainCards />
       </div>
     </main>

@@ -86,6 +86,8 @@ const Column = ({ images, y = 0 }: any) => {
               fill
               alt='image'
               className='rounded-lg object-cover'
+              placeholder='empty'
+              priority
             />
           </div>
         );
