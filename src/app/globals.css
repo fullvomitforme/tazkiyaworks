@@ -144,8 +144,4 @@
   .column:nth-of-type(4) {
     top: -45%;
   }
-
-  .spacer {
-    height: 100vh;
-  }
 }
