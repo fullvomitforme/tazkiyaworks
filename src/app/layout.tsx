@@ -1,13 +1,14 @@
+"use client";
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/src/components/navbar/Navbar';
 import localFont from 'next/font/local';
 import { cn } from '@/src/lib/utils';
-import BreakpointBadge from '@/src/components/ui/BreakpointBadge';
 import Footer from '@/src/components/footer/Footer';
-import Head from 'next/head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Cursor from '@/src/components/ui/sticky-cursor';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -94,6 +95,7 @@ export default function RootLayout({
           PPEditorialNew.variable
         )}
       >
+        <Cursor />
         <Navbar />
         {children}
         <Footer />
