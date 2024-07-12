@@ -73,6 +73,7 @@ const config = {
         'background-study-case': 'var(--background-study-case)',
       },
       fontFamily: {
+        inter: ['var(--font-inter)', 'sans-serif'],
         neueMontreal: ['var(--font-neue-montreal)', 'sans-serif'],
         editorialNew: ['var(--font-editorial-new)', 'serif'],
       },

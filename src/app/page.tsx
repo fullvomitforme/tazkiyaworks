@@ -5,21 +5,16 @@ import TazkiyaWorksLogo from '@/public/logos/tazkiya_works.png';
 
 export default async function Work() {
   return (
-    <main className='flex flex-col items-center justify-center space-y-10'>
-      <div className='p-4'>
+    <main className='flex flex-col items-center justify-center space-y-10 font-inter text-xl leading-relaxed'>
+      {/* <div>
         <Image
           src={TazkiyaWorksLogo}
-          sizes='100vw'
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
           alt='fuck around and find out'
           priority
         ></Image>
-      </div>
-      <div className='container flex items-center justify-center p-4 md:p-9'>
-        <div className='space-y-2 text-sm font-normal leading-relaxed md:space-y-5 md:text-3xl'>
+      </div> */}
+      {/* <div className='container flex items-center justify-center p-4 md:p-9'>
+        <div>
           <p>
             I&apos;m Tazkiya Mujahid, a craftsman of{' '}
             <span className='font-editorialNew text-highlight'>
@@ -49,13 +44,14 @@ export default async function Work() {
       </div>
       <div className='my-5 py-5'>
         <RunningText />
-      </div>
-      <div className='container p-4'>
+      </div> */}
+      {/* <div className='container p-4'>
         <h2 className='p-4 text-lg font-medium uppercase leading-relaxed tracking-wider text-highlight'>
           Project
         </h2>
         <MainCards />
-      </div>
+      </div> */}
     </main>
   );
 }
+`                               `;

@@ -8,8 +8,6 @@ import Footer from '@/src/components/footer/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Cursor from '@/src/components/ui/sticky-cursor';
 
-const inter = Inter({ subsets: ['latin'] });
-
 const PPNeueMontreal = localFont({
   src: [
     {
@@ -70,6 +68,11 @@ const PPEditorialNew = localFont({
   variable: '--font-editorial-new',
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
 export const metadata: Metadata = {
   title: 'Tazkiya Mujahid | Your Favorites Destroyer',
   description:
@@ -90,13 +93,14 @@ export default function RootLayout({
         className={cn(
           'min-h-screen bg-background antialiased',
           PPNeueMontreal.variable,
-          PPEditorialNew.variable
+          PPEditorialNew.variable,
+          inter.variable
         )}
       >
-        <Cursor />
+        {/* <Cursor /> */}
         <Navbar />
-        {children}
-        <Footer />
+        {/* {children} */}
+        {/* <Footer /> */}
         <SpeedInsights />
       </body>
     </html>
