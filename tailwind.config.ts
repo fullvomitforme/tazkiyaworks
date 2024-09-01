@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config = {
   darkMode: ['class'],
@@ -14,7 +15,12 @@ const config = {
       center: true,
     },
     extend: {
+      backgroundImage: {
+        grain:
+          "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%20.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%10.1%22/%3E%3C/svg%3E')",
+      },
       colors: {
+        ondeliveryPrimary: '#1254A0',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -73,9 +79,9 @@ const config = {
         'background-study-case': 'var(--background-study-case)',
       },
       fontFamily: {
-        inter: ['var(--font-inter)', 'sans-serif'],
-        neueMontreal: ['var(--font-neue-montreal)', 'sans-serif'],
-        editorialNew: ['var(--font-editorial-new)', 'serif'],
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        dmSans: ['var(--font-dm-sans)', 'sans-serif'],
+        instrumentSerif: ['var(--font-instrument-serif)', 'serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

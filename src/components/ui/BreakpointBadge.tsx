@@ -1,4 +1,5 @@
-// components/BreakpointBadge.tsx
+'use client';
+
 import { useEffect, useState } from 'react';
 import { Badge } from '@/src/components/ui/badge';
 

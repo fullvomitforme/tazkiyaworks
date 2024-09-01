@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-default: var(--font-dm-sans);
+    --background: 0 0% 100%;
+    --foreground: #1a1a1a;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --lavender: #eae5ff;
+    --highlight: #003cc7;
+    --dark-slate-blue: #143881;
+    --royal-blue-highlight: #2862dd;
+    --white: white;
+    --dark-slate-grey: #3d3d3d;
+    --thistle: #cdc4f0;
+    --background: #eff7ff;
+    --alice-blue: #e4ecff;
+    --dark-slate-blue-2: #5d4c9c;
+    --cadet-blue: #41a1be;
+    --new-blue: #1152b3;
+    --silver: rgba(192, 192, 192, 0.5);
+    --pale-turquoise: #c4ece2;
+    --black: black;
+    --background-boxes: rgba(245, 245, 245, 0.46);
+    --lavender-2: #f6edff;
+    --cornflower-blue: #4f84ff;
+    --nav-background: rgba(233, 227, 204, 0.46);
+    --light-cyan: #e5fff8;
+    --teal: #176d86;
+    --white-smoke: whitesmoke;
+    --dark-green: #2a7c53;
+    --sweet-orange: #ffa928;
+    --background-study-case: rgba(255, 255, 255, 0.109);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+
+  }
+
+  .noise {
+    position: fixed;
+    z-index: 9999;
+    top: -300%;
+    left: -150%;
+    height: 600%;
+    width: 600%;
+    animation: grain 7s steps(10) infinite;
+    background-image: url('/noise.png');
+    background-size: 200px;
+    background-repeat: repeat;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .noise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for opacity */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+  }
+
+  @keyframes grain {
+    0%, 100% {
+      transform: translate(0);
+    }
+
+    10% {
+      transform: translate(-5%, -10%);
+    }
+
+    20% {
+      transform: translate(-15%, 5%);
+    }
+
+    30% {
+      transform: translate(7%, -25%);
+    }
+
+    40% {
+      transform: translate(-5%, 25%);
+    }
+
+    50% {
+      transform: translate(-15%, 10%);
+    }
+
+    60% {
+      transform: translate(15%);
+    }
+
+    70% {
+      transform: translateY(15%);
+    }
+
+    80% {
+      transform: translate(3%, 35%);
+    }
+
+    90% {
+      transform: translate(-10%, 10%);
+    }
+
+    
+  }
+  
+  .gallery {
+    height: 175vh;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color :var(--highlight);
+  }
+
+  .column {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    min-width: 250px;
+    position: relative;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height:1000%;
+    position: relative;
+    border-radius: 1vw;
+    overflow: hidden;
+  }
+
+  .column:nth-of-type(1) {
+    top: -45%;
+  }
+
+  .column:nth-of-type(2) {
+    top: -95%;
+  }
+
+  .column:nth-of-type(3) {
+    top: -35%;
+  }
+
+  .column:nth-of-type(4) {
+    top: -45%;
+  }
+}

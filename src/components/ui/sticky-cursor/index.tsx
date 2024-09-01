@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const Cursor = () => {
-  const cursorSize = 40;
+  const cursorSize = 15;
 
   const mouse: any = {
     x: useMotionValue(0),
@@ -34,7 +34,7 @@ const Cursor = () => {
   return (
     <motion.div
       style={{ left: smoothMouse.x, top: smoothMouse.y }}
-      className='pointer-events-none fixed z-[99999] hidden h-[40px] w-[40px] cursor-none rounded-[50%] border-[1px] border-highlight opacity-[0.4] mix-blend-difference backdrop-blur-[20px] backdrop-filter md:block'
+      className='pointer-events-none fixed z-[99999] hidden h-[30px] w-[30px] cursor-none rounded-[50%] border-[1px] border-slate-600 opacity-[0.4] mix-blend-difference backdrop-blur-[20px] backdrop-filter md:block'
     ></motion.div>
   );
 };

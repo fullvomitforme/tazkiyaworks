@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: ./docker/dev.Dockerfile
     volumes:
-      - .:/app/next-app
+      - .:/app/tazkiyaworks
     restart: always
     ports:
       - 3000:3000

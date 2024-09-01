@@ -3,17 +3,17 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { useRouter, usePathname } from 'next/navigation';
 
-const Routes = () => {
+export default function Routes() {
   const router = useRouter();
   const pathname = usePathname();
 
   const routes = [
-    { label: 'Work', href: '/', active: pathname === '/' },
-    { label: 'About', href: '/about', active: pathname === '/about' },
+    { label: 'Work', href: '/work', active: pathname === '/work' },
     {
       label: 'Resume',
       href: 'https://tazkiyamujahid.notion.site/Tazkiya-Anafsi-Al-Mujahid-Resume-da37e36e6635439da6f41a64ffa02e00?pvs=4',
     },
+    { label: 'Blog', href: '/blog' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tazkiya-mujahid/' },
     {
       label: 'Email',
@@ -22,16 +22,15 @@ const Routes = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center space-y-5 p-4 md:flex-row md:space-x-10 md:space-y-0'>
+    <div className='flex flex-col items-center justify-center space-y-5 p-4 font-dmSans md:flex-row md:space-x-10 md:space-y-0'>
       {routes.map((route) => (
         <Link
           key={route.label}
           href={route.href}
           className={clsx(
-            'w-full px-3 py-1 text-center text-lg font-normal uppercase leading-tight tracking-widest shadow-2xl shadow-blue-500/20 transition-all duration-200 ease-in-out hover:rounded-full hover:bg-highlight hover:text-white-smoke',
+            'w-full rounded-full px-3 py-1 text-center text-base font-medium uppercase tracking-wide transition-all duration-200 ease-in-out hover:bg-zinc-800 hover:text-white',
             {
-              'rounded-full bg-highlight text-white-smoke hover:shadow-2xl hover:shadow-blue-500/20':
-                route.active,
+              'bg-zinc-800 text-white': route.active,
             }
           )}
         >
@@ -41,5 +40,3 @@ const Routes = () => {
     </div>
   );
 };
-
-export default Routes;

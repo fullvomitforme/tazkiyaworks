@@ -17,12 +17,12 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 # for deploting the build version
 
-# RUN bun next build
+RUN bun next build
 # and
-# CMD bun next start
+CMD bun next start
 
 # OR for sart Next.js in development, comment above two lines and uncomment below line
 
-CMD bun run dev
+# CMD bun run dev
 
 # Note: Don't expose ports here, Compose will handle that for us
