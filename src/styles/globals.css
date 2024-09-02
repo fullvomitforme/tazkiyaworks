@@ -140,13 +140,14 @@
     padding: var(--top-internal-margin) var(--left-right-margin);
     align-items: center;
     justify-content: center;
-    row-gap: var(--top-internal-margin)
+    row-gap: var(--top-internal-margin);
+    overflow: hidden;
 }
 
 .splashscreen .loading-text-wrapper {
     width: auto;
     height: auto;
-    overflow: hidden
+    overflow:hidden;
 }
 
 .splashscreen .loading-text-wrapper .loading-text {
