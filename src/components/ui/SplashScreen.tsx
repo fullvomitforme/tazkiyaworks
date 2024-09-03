@@ -34,7 +34,7 @@ export default function SplashScreen() {
       <motion.div
         animate={{
           scale: [0, 1, 1, 0],
-          rotate: [0, 360, 0, 0],
+          rotate: [0, 360, 0],
           transition: { duration: 3, repeat: Infinity },
         }}
       >
