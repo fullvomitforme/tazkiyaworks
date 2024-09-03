@@ -62,10 +62,6 @@ export default function SplashScreen() {
       </motion.div>
       <div className='loading-text-wrapper'>
         <motion.p
-          // initial={{ y: -50 }}
-          // animate={{ y: 0 }}
-          // transition={{ duration: 0.5 }}
-
           animate={{
             y: [-50, 0, 0, -50],
             transition: { duration: 3 },
