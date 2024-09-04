@@ -7,7 +7,7 @@ import OndeliveryLogisticLogo from '@/public/about/recent-work/ondelivery_logist
 import OnmarketScreen from '@/public/about/recent-work/onmarket_screen.png';
 import PrintedinHeula from '@/public/about/recent-work/printedinheula_logo.png';
 import SbbLogo from '@/public/about/recent-work/sbb_logo.png';
-import Sprinkle from '@/public/about/recent-work/sprinkle.png';
+import Sparkle from '@/public/about/recent-work/sparkle.png';
 
 export default function RecentWork() {
   return (
@@ -47,6 +47,7 @@ export default function RecentWork() {
           width={280}
           className='absolute -right-20 bottom-20 z-10 rotate-12 transform'
         />
+
         <Image
           src={PrintedinHeula}
           alt='Printed in Heula Logo'
@@ -58,6 +59,20 @@ export default function RecentWork() {
           alt='SBB Logo'
           width={212}
           className='absolute -left-44 bottom-10 z-10 translate-x-20 -rotate-12 transform'
+        />
+
+        <Image
+          src={Sparkle}
+          alt='Sparkle Logo'
+          width={80}
+          className='absolute -left-28 top-10 z-10 translate-x-20 -rotate-6 transform'
+        />
+
+        <Image
+          src={Sparkle}
+          alt='Sparkle Logo'
+          width={80}
+          className='absolute -left-28 top-10 z-10 translate-x-20 -rotate-6 transform'
         />
 
         <Image src={OndeliveryScreen} alt='Recent Work' width={1249} />
