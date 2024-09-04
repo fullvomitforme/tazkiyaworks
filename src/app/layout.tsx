@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'max-h-screen overflow-hidden',
+          'max-h-screen',
           dmSans.variable,
           instrumentSerif.variable
         )}
