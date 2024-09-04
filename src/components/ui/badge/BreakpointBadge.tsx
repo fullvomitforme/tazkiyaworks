@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Badge } from '@/src/components/ui/badge';
+import { Badge } from '@/src/components/ui/badge/badge';
 
 const BreakpointBadge: React.FC = () => {
   const [breakpoint, setBreakpoint] = useState<string>('');
