@@ -26,7 +26,7 @@ export default async function About() {
         </div>
       </div>
       <div className='my-10'>
-        <span className='font-dmSans text-lg text-gray-600'>
+        <span className='font-dmSans text-lg text-foreground'>
           The tools and Tech Stack that flow with me
         </span>
       </div>
