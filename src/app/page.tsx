@@ -8,7 +8,7 @@ export default async function About() {
   return (
     <main className='mt-20'>
       <div className='flex flex-col items-center justify-center space-y-24'>
-        <div className='flex flex-col items-center justify-center space-y-5'>
+        <div className='flex flex-col items-center justify-center space-y-3'>
           <div className='flex flex-row items-center justify-between space-x-1 rounded-full bg-zinc-600/50 px-5 py-1 font-dmSans text-white shadow-sm backdrop-blur-sm transition-colors hover:bg-zinc-600/60'>
             <div className='flex items-center'>
               <AnimationAvailable />
@@ -29,9 +29,14 @@ export default async function About() {
             </p>
           </div>
         </div>
+        <div className='-mb-10'>
+          <p className='-mb-10 font-dmSans text-lg font-medium text-gray-600'>
+            The tools and Tech Stack that flow with me
+          </p>
+        </div>
         <TechStack />
         <div className='flex flex-col space-y-5'>
-          <h1 className='text-left font-dmSans text-4xl text-foreground'>
+          <h1 className='mb-5 text-center font-dmSans text-3xl font-semibold text-foreground'>
             Recent Work
           </h1>
           <div className='group relative'>
