@@ -1,5 +1,6 @@
-const loading = () => {
-  return <div>loading</div>;
-};
+import React from 'react';
+import LoadingScreen from '../components/ui/LoadingScreen';
 
-export default loading;
+export default function loading() {
+  return <LoadingScreen />;
+}
