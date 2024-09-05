@@ -13,6 +13,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
     "@studio-freight/lenis": "^1.0.33",
+    "@types/minio": "^7.1.1",
     "@vercel/speed-insights": "^1.0.4",
     "blaze-slider": "^1.9.3",
     "caniuse-lite": "^1.0.30001649",

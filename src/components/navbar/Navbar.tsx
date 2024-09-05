@@ -13,7 +13,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='m-4 mx-10 rounded-full bg-transparent shadow-sm ring-1 ring-black/5 backdrop-blur-sm'>
+    <nav className='z-50 mx-5 my-10 rounded-full bg-transparent shadow-sm ring-1 ring-black/5 backdrop-blur-sm'>
       <div className='mx-auto px-10'>
         <div className='flex justify-between'>
           <div className='my-auto flex'>
