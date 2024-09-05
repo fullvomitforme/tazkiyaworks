@@ -114,7 +114,7 @@
     background-size: 200px;
     background-repeat: repeat;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .noise::before {
@@ -258,5 +258,15 @@
 
   .column:nth-of-type(4) {
     top: -45%;
+  }
+
+  .shake {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+
+    animation-duration: 300ms;
   }
 }
