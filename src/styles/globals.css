@@ -102,6 +102,11 @@
 
   }
 
+html.lenis,
+html.lenis body {
+  height: 500vh;
+}
+
   .noise {
     position: fixed;
     z-index: 9999;
