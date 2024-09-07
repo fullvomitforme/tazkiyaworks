@@ -20,6 +20,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.18.0",
+    "lenis": "^1.1.13",
     "lucide-react": "^0.302.0",
     "next": "^15.0.0-rc.0",
     "react": "^19.0.0-rc-8269d55d-20240802",

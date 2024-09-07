@@ -8,7 +8,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'storage.onindonesia.id',
         port: '',
-        pathname: '',
+        pathname: '/**',
       },
     ],
   },

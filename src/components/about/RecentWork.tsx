@@ -1,6 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import '@/src/styles/globals.css';
+
+import { useScroll, motion, useTransform } from 'framer-motion';
 
 export default function RecentWork() {
   const OndeliveryLogisticLogo =
@@ -16,17 +21,34 @@ export default function RecentWork() {
   const OnMarketScreen =
     'https://storage.onindonesia.id/tazkiyaworks/public/about/recent-work/onmarket_screen.png';
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 1', '1.33 1'],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], ['0.8', '1']);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], ['0.6', '1']);
+
   return (
-    <div className='my-20 flex w-full flex-col items-center justify-center space-y-10'>
+    <motion.div
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className='my-20 flex w-full flex-col items-center justify-center space-y-10'
+    >
       {/* :TODO: Add a gradient overlay to the bottom of the image */}
-      <div className='absolute -bottom-80 left-0 right-0 z-20 h-56 w-full bg-gradient-to-t from-white to-transparent'></div>
+      {/* <div className='right-0 -bottom-80 left-0 z-20 absolute bg-gradient-to-t from-white to-transparent w-full h-56'></div> */}
       <h1 className='mb-5 text-center font-dmSans text-7xl font-medium text-foreground'>
         Recent Work
       </h1>
       <div className='group relative flex items-center justify-center'>
         <Link
           href='/work'
-          className='absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100'
+          className='absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-75 group-hover:opacity-100'
         >
           <button className='flex flex-row items-center justify-center space-x-2 rounded-full bg-zinc-600/50 px-6 py-2 font-dmSans text-white backdrop-blur-sm transition-colors hover:bg-zinc-600/60'>
             <svg
@@ -54,16 +76,15 @@ export default function RecentWork() {
           width={280}
           height={0}
           style={{ height: 'auto' }}
-          className='absolute -right-20 bottom-20 z-10 rotate-12 transform'
+          className='shake absolute -right-20 bottom-20 z-10 rotate-12 group-hover:rotate-6'
         />
-
         <Image
           src={PrintedinHeula}
           alt='Printed in Heula Logo'
           width={212}
           height={0}
           style={{ height: 'auto' }}
-          className='absolute -top-5 left-1/2 z-10 translate-x-20 rotate-6 transform'
+          className='shake absolute -top-5 left-1/2 z-10 translate-x-20 rotate-6 group-hover:rotate-12'
         />
         <Image
           src={SbbLogo}
@@ -71,36 +92,32 @@ export default function RecentWork() {
           width={212}
           height={0}
           style={{ height: 'auto' }}
-          className='absolute -left-44 bottom-10 z-10 translate-x-20 -rotate-12 transform'
+          className='shake absolute -left-44 bottom-10 z-10 translate-x-20 -rotate-12 group-hover:-rotate-6'
         />
-
         <Image
           src={Sparkle}
           alt='Sparkle Logo'
           width={80}
           height={0}
           style={{ height: 'auto' }}
-          className='absolute -left-28 top-10 z-10 translate-x-20 -rotate-6 transform'
+          className='shake absolute -left-28 top-10 z-10 translate-x-20 -rotate-6 transform group-hover:-rotate-12'
         />
-
         <Image
           src={Sparkle}
           alt='Sparkle Logo'
           width={80}
           height={0}
           style={{ height: 'auto' }}
-          className='absolute -right-11 top-5 z-10 rotate-6 transform'
+          className='shake absolute -right-11 top-5 z-10 rotate-6 group-hover:-rotate-12'
         />
-
         <Image
           src={OnMarketScreen}
           alt='On Market Screen'
           width={80}
           height={0}
           style={{ height: 'auto' }}
-          className='absolute bottom-5 z-10 translate-x-1/2 rotate-6 transform'
+          className='shake absolute bottom-5 z-10 translate-x-1/2 rotate-6 group-hover:-rotate-6'
         />
-
         <Image
           src={OndeliveryScreen}
           alt='Recent Work'
@@ -109,6 +126,6 @@ export default function RecentWork() {
           style={{ height: 'auto' }}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

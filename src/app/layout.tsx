@@ -7,6 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { cn } from '@/src/lib/utils';
 import Cursor from '@/src/components/ui/sticky-cursor';
 import SplashScreen from '../components/ui/SplashScreen'; 
+import SmoothScrolling from '../components/ui/SmoothScrolling';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -36,12 +37,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={cn('', dmSans.variable, instrumentSerif.variable)}>
-        <div className='absolute inset-0 -z-10 h-screen w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]'></div>
+      <body
+        className={cn(
+          'overflow-hidden',
+          dmSans.variable,
+          instrumentSerif.variable
+        )}
+      >
+        <div className='absolute inset-0 -z-10 w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] bg-repeat'></div>
         <Cursor />
         <SplashScreen />
         <Navbar />
-        {children}
+        <SmoothScrolling>{children}</SmoothScrolling>
+        {/* {children} */}
         <SpeedInsights />
         <div className='noise'></div>
       </body>
