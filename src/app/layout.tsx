@@ -49,6 +49,7 @@ export default function RootLayout({
         <SplashScreen />
         <Navbar />
         <SmoothScrolling>{children}</SmoothScrolling>
+        {/* {children} */}
         <SpeedInsights />
         <div className='noise'></div>
       </body>
