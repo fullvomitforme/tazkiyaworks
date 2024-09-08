@@ -40,7 +40,7 @@ const MusicCard = ({
   return (
     <HoverCard>
       <HoverCardTrigger asChild>{children}</HoverCardTrigger>
-      <HoverCardContent>
+      <HoverCardContent className='bg-transparent backdrop-blur-sm'>
         <HoverCardContentData src={coverArt} title={title} author={artist} />
         <div className='flex items-center gap-x-0.5'>
           <button
@@ -48,16 +48,16 @@ const MusicCard = ({
             onClick={handlePlay}
           >
             {isPlaying ? (
-              <Pause className='shrink-0' size={12} weight='fill' />
+              <Pause className='shrink-0 text-white' size={15} weight='fill' />
             ) : (
-              <Play className='shrink-0' size={12} weight='fill' />
+              <Play className='shrink-0 text-white' size={15} weight='fill' />
             )}
           </button>
 
           <a
             href={songUrl}
             target='_blank'
-            className='bg-gray-12 hover:bg-gray-11 text-gray-5 flex w-full items-center justify-center gap-x-1 whitespace-nowrap rounded-sm py-1 font-dmSans text-sm font-medium transition-colors duration-100'
+            className='text-gray-5 flex w-full items-center justify-center gap-x-1 whitespace-nowrap rounded-sm bg-red-300/20 py-1 font-dmSans text-sm font-medium backdrop-blur-sm transition-colors duration-100 hover:bg-red-300 hover:text-white'
           >
             <SpotifyLogo className='shrink-0' size={16} weight='fill' />
             Listen on Spotify
@@ -104,7 +104,7 @@ const HoverCardContentData = ({
         <Image
           src={src}
           fill
-          className='object-cover object-center'
+          className='rounded-lg object-cover object-center'
           alt={`Album art for ${title} by ${author}`}
           quality={50}
           priority
@@ -112,7 +112,7 @@ const HoverCardContentData = ({
       </div>
       <div className='mb-2 mt-2 text-foreground'>
         <span className='block truncate font-medium leading-none'>{title}</span>
-        <span className='text-gray-10 text-sm'>by {author}</span>
+        <span className='text-sm text-foreground'>by {author}</span>
       </div>
     </>
   );
