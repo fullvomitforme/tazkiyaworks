@@ -11,10 +11,14 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.0.2",
+    "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-hover-card": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "@studio-freight/lenis": "^1.0.33",
     "@types/minio": "^7.1.1",
     "@vercel/speed-insights": "^1.0.4",
+    "bad-words": "^4.0.0",
     "blaze-slider": "^1.9.3",
     "caniuse-lite": "^1.0.30001649",
     "class-variance-authority": "^0.7.0",
