@@ -23,7 +23,6 @@ const getAccessToken = async () => {
 
   const data = await response.json();
   console.log(data);
-  console.log({ CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN });
 
   return data.access_token as string;
 };
@@ -42,7 +41,6 @@ const getNowPlaying = async () => {
 
   if (response.status === 204) {
     return getLastPlayed();
-    console.log(response);
   }
 
   try {
