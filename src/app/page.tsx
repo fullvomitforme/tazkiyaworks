@@ -1,10 +1,71 @@
+import { unstable_noStore as noStore } from 'next/cache';
+import getLastPlayed from '@/src/lib/spotify';
+
 import TechStack from '@/src/components/ui/techstack-marquee/techstack-marquee';
 import StatusBadge from '@/src/components/ui/badge/status-badge';
 import RecentWork from '@/src/components/about/RecentWork';
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+  MusicCard,
+} from '@/src/components/ui/hover-card';
+
+import { CalendarDays } from 'lucide-react';
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@/src/components/ui/avatar';
+
+import Image from 'next/image';
+
+const Currently = async () => {
+  noStore();
+  const { data: song } = await getLastPlayed();
+
+  const recent = song.is_playing ? song.item : song.items[0].track;
+  const track = {
+    title: recent.name,
+    artist: recent.artists
+      .map((_artist: { name: string }) => _artist.name)
+      .shift(),
+    songUrl: recent.external_urls.spotify,
+    coverArt: recent.album.images[0].url,
+    previewUrl: recent.preview_url,
+  };
+
+  return (
+    <>
+      <span className='font-semibold'>
+        <MusicCard {...track}>
+          <a
+            href={track.songUrl}
+            target='_blank'
+            className='underline-offset-4 hover:underline'
+          >
+            {track.title}
+          </a>
+        </MusicCard>{' '}
+        by {track.artist}
+      </span>
+    </>
+  );
+};
 
 export default async function About() {
+  const graphicDesigner =
+    'https://storage.onindonesia.id/tazkiyaworks/public/about/gktm/graphicdesignerismypassion.png';
+
+  const uiUxDesigner =
+    'https://storage.onindonesia.id/tazkiyaworks/public/about/gktm/uiuxmeme.jpg';
+
+  const informationSystem =
+    'https://storage.onindonesia.id/tazkiyaworks/public/about/gktm/informationsystemmeme.jpg';
+
   return (
-    <main className='flex flex-col items-center justify-center'>
+    <main className='flex flex-col items-center justify-center px-48'>
       <div className='mt-10 flex flex-col items-center justify-center space-y-5'>
         {/* Badge here */}
         <StatusBadge />
@@ -20,6 +81,12 @@ export default async function About() {
             principles, I excel in transforming complex ideas into seamless user
             experiences.
           </p>
+          <p className='max-w-5xl text-center font-dmSans text-lg'>
+            While you’re reading this, I’m listening to <Currently />, minding
+            my own business waiting for you to hit me up, so enjoy your stay.
+            Meanwhile, I hope you’re having a great day and enjoying whatever
+            you’re up to!
+          </p>
         </div>
       </div>
       <div className='my-10'>
@@ -28,37 +95,117 @@ export default async function About() {
         </span>
       </div>
       <TechStack />
-      {/* <div className='w-full'>
-        <div className='flex flex-col justify-normal items-start space-y-3 my-20 px-96 font-dmSans text-left'>
-          <h1 className='text-3xl'>GTKM.</h1>
-          <p>
-            I'm Tazkiya Mujahid, a UI/UX and graphic designer based in Jakarta,
-            with a background in Information Systems from Mercu Buana
-            University. Currently, I specialize in creating seamless digital
-            experiences, combining my technical skills with a deep passion for
-            design.
-          </p>
-          <p>
-            In my professional journey, I've focused on testing automation using
-            tools like TypeScript, Node.js, and Playwright. Precision and
-            quality are at the core of my work, ensuring that every digital
-            product functions flawlessly.
-          </p>
-          <p>
-            Beyond the technical side, I immerse myself in the creative world of
-            UI/UX and graphic design. I take joy in crafting visually compelling
-            and user-centric interfaces, infusing each project with a unique
-            blend of creativity and functionality. My experience at
-            Heulaulastudios has further fueled my love for design, transforming
-            ideas into captivating visuals and memorable user experiences.
-          </p>
-          <p>
-            For me, design is more than just a skill—it's a passion. It’s where
-            I find my creative spark, turning abstract concepts into engaging
-            and aesthetic solutions.
-          </p>
-        </div>
-      </div> */}
+      <div className='mx-auto my-20 flex flex-col items-start justify-start gap-5 text-left font-dmSans'>
+        <h1 className='text-4xl font-medium'>GTKM.</h1>
+
+        <p>
+          I'm <span className='font-bold'>Tazkiya Mujahid</span>, a{' '}
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <span className='font-bold underline-offset-4 hover:underline'>
+                UI/UX
+              </span>
+            </HoverCardTrigger>
+            <HoverCardContent className='w-80'>
+              <div>
+                <Image
+                  src={uiUxDesigner}
+                  alt='UI/UX Designer meme'
+                  width={300}
+                  height={300}
+                  className='rounded-md'
+                />
+              </div>
+            </HoverCardContent>
+          </HoverCard>{' '}
+          and{' '}
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <span className='font-bold underline-offset-4 hover:underline'>
+                Graphic Designer
+              </span>
+            </HoverCardTrigger>
+            <HoverCardContent className='w-80'>
+              <div>
+                <Image
+                  src={graphicDesigner}
+                  alt='Graphic Designer meme'
+                  width={300}
+                  height={300}
+                  className='rounded-md'
+                />
+              </div>
+            </HoverCardContent>
+          </HoverCard>{' '}
+          based in Jakarta, with a background in{' '}
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <span className='font-bold underline-offset-4 hover:underline'>
+                Information Systems
+              </span>
+            </HoverCardTrigger>
+            <HoverCardContent className='w-80'>
+              <div>
+                <Image
+                  src={informationSystem}
+                  alt='Information System meme'
+                  width={300}
+                  height={300}
+                  className='rounded-md'
+                />
+              </div>
+            </HoverCardContent>
+          </HoverCard>{' '}
+          from Mercu Buana University. I specialize in creating seamless{' '}
+          <span className='font-bold'>digital experiences</span>, blending my
+          technical skills with a deep passion for design.
+        </p>
+        <p>
+          In my professional journey, I immerse myself in the creative world of{' '}
+          <span className='font-bold'>UI/UX</span> and{' '}
+          <span className='font-bold'>Graphic Design</span>. I take joy in
+          crafting visually compelling and{' '}
+          <span className='font-bold'>user-centric</span> interfaces, infusing
+          each project with a unique blend of creativity and functionality. My
+          experience at{' '}
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <span className='font-bold underline-offset-4 hover:underline'>
+                Heulaula Studios
+              </span>
+            </HoverCardTrigger>
+            <HoverCardContent className='w-80'>
+              <div className='flex justify-between space-x-4'>
+                <Avatar>
+                  <AvatarImage src='https://avatars.githubusercontent.com/u/132384789' />
+                  <AvatarFallback>HS</AvatarFallback>
+                </Avatar>
+                <div className='space-y-1'>
+                  <h4 className='text-sm font-semibold'>Heulaula Studios</h4>
+                  <p className='text-sm'>
+                    A tiny design outpost, embodies the futility of creative
+                    endeavors. 🌏🥷
+                  </p>
+                  <div className='flex items-center pt-2'>
+                    <CalendarDays className='mr-2 h-4 w-4 opacity-70' />{' '}
+                    <span className='text-xs text-muted-foreground'>
+                      Joined December 2019
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </HoverCardContent>
+          </HoverCard>{' '}
+          has further fueled my love for design, transforming ideas into
+          captivating visuals and memorable user experiences.
+        </p>
+        <p>
+          For me, design is more than just a skill—it's a{' '}
+          <span className='font-bold'>passion</span>. It’s where I find my{' '}
+          <span className='font-bold'>creative spark</span>, turning abstract
+          concepts into engaging and aesthetic solutions.
+        </p>
+      </div>
       <RecentWork />
     </main>
   );
