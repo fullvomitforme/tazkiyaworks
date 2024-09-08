@@ -13,7 +13,7 @@ export default function Routes() {
       label: 'Resume',
       href: 'https://tazkiyamujahid.notion.site/Tazkiya-Anafsi-Al-Mujahid-Resume-da37e36e6635439da6f41a64ffa02e00?pvs=4',
     },
-    { label: 'Blog', href: '/blog' },
+    { label: 'Blog', href: '/blog', active: pathname === '/blog' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tazkiya-mujahid/' },
     {
       label: 'Email',
