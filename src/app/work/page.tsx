@@ -3,7 +3,7 @@ import WorkInProgress from '@/src/components/work-in-progress/work-in-progress';
 
 export default function Work() {
   return (
-    <div>
+    <div className='h-96'>
       <WorkInProgress />
     </div>
   );
