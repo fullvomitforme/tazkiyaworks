@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={cn('', dmSans.variable, instrumentSerif.variable)}>
-        <div className='fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] bg-repeat'></div>
+        <div className='bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] -z-10 fixed inset-0 bg-white bg-[size:6rem_4rem] bg-repeat w-full h-full'></div>
 
         <Cursor />
         <SplashScreen />
