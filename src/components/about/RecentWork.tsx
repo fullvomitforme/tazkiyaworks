@@ -38,18 +38,13 @@ export default function RecentWork() {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      // className='flex flex-col justify-center items-center space-y-10 my-20 w-full'
       className='flex flex-col items-center justify-center md:my-20 md:w-full md:space-y-10'
     >
       {/* :TODO: Add a gradient overlay to the bottom of the image */}
       {/* <div className='right-0 -bottom-80 left-0 z-20 absolute bg-gradient-to-t from-white to-transparent w-full h-56'></div> */}
-
-      {/* TODO:Responsive Recent Work */}
-      {/* <h1 className='mb-5 font-dmSans font-medium text-7xl text-center text-foreground'> */}
-      <h1 className='text-foregroun mb-5 text-center font-dmSans text-4xl font-medium md:text-7xl'>
+      <h1 className='mb-5 text-center font-dmSans text-4xl font-medium text-foreground md:text-7xl'>
         Recent Work
       </h1>
-      {/* <div className='relative flex justify-center items-center group'> */}
       <div className='group relative hidden items-center justify-center md:inline-flex'>
         <Link
           href='/work'
@@ -162,7 +157,6 @@ export default function RecentWork() {
           width={1080}
           height={0}
           style={{ height: 'auto' }}
-          className=''
         />
       </div>
     </motion.div>
