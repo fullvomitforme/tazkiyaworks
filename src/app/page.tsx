@@ -43,7 +43,7 @@ const Currently = async () => {
           <a
             href={track.songUrl}
             target='_blank'
-            className='bg-red-300/20 underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'
+            className='bg-red-300/20 hover:bg-red-500 hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'
           >
             {track.title}
           </a>
@@ -71,66 +71,60 @@ export default async function About() {
     'https://storage.onindonesia.id/tazkiyaworks/public/about/gktm/MENARIK.gif';
 
   return (
-    // <main className='flex flex-col justify-center items-center px-48'>
-    <main className='mx-5 flex flex-col items-center justify-center md:px-48'>
-      {/* TODO: RESPONSIVE CONTTENT */}
-      {/* <div className='flex flex-col justify-center items-center space-y-5 mt-10'> */}
-      <div className='mt-32 flex flex-col items-center justify-center space-y-5 md:mt-40'>
+    <main className='flex flex-col justify-center items-center mx-5 md:px-48'>
+      <div className='flex flex-col justify-center items-center space-y-5 mt-32 md:mt-40'>
         {/* Badge here */}
         <StatusBadge />
-        <div className='flex flex-col items-center justify-center space-y-10 text-foreground'>
-          {/* <h1 className='font-instrumentSerif text-9xl'> */}
+        <div className='flex flex-col justify-center items-center space-y-10 text-foreground'>
           <h1 className='font-instrumentSerif text-9xl'>
             I'm Tazkiya Mujahid.
           </h1>
-          {/* <p className='max-w-5xl font-dmSans text-center text-lg'> */}
-          <p className='text-left font-dmSans text-lg md:max-w-5xl md:text-center'>
+          <p className='md:max-w-5xl font-dmSans text-left text-lg md:text-center'>
             A designer of{' '}
-            <span className='bg-red-300/20 underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               intuitive interfaces
             </span>{' '}
             and engaging digital experiences. As a{' '}
-            <span className='bg-red-300/20 underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               UI/UX and Graphic designer based in Jakarta
             </span>
             , I've refined my craft in creating{' '}
-            <span className='bg-red-300/20 underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               visually compelling
             </span>{' '}
             and user-centric designs. With expertise in tools like Figma and a
             strong grasp of design principles, I excel in{' '}
-            <span className='bg-red-300/20 underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               transforming complex ideas
             </span>{' '}
             into seamless user experiences.
           </p>
-          {/* <p className='max-w-5xl font-dmSans text-center text-lg'> */}
-          <p className='text-left font-dmSans text-lg md:max-w-5xl md:text-center'>
+          <p className='md:max-w-5xl font-dmSans text-left text-lg md:text-center'>
             While you’re reading this, I’m listening to <Currently />, minding
             my own business waiting for you to hit me up, so enjoy your stay. I
             hope you’re having a great day and enjoying whatever you’re up to!
           </p>
         </div>
       </div>
-      <div className='mb-10 mt-10'>
-        <span className='text-md font-dmSans text-gray-700'>
+      <div className='mt-10 mb-10'>
+        <span className='font-dmSans text-gray-700 text-md'>
           The tools and Tech Stack that flow with me
         </span>
       </div>
       <TechStack />
-      <div className='mx-auto mb-10 mt-20 flex flex-col items-start justify-start gap-5 text-left font-dmSans'>
-        <h1 className='text-4xl font-medium'>GTKM.</h1>
+      <div className='flex flex-col justify-start items-start gap-5 mx-auto mt-20 mb-10 font-dmSans text-left'>
+        <h1 className='font-medium text-4xl'>GTKM.</h1>
 
         <div className='flex flex-col gap-5 text-lg'>
           <p>
             I'm{' '}
             <HoverCard>
               <HoverCardTrigger asChild>
-                <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+                <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
                   Tazkiya Mujahid
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className='w-80 bg-transparent backdrop-blur-sm'>
+              <HoverCardContent className='bg-transparent backdrop-blur-sm w-80'>
                 <div>
                   <Image
                     src={tazkiya}
@@ -145,11 +139,11 @@ export default async function About() {
             , a{' '}
             <HoverCard>
               <HoverCardTrigger asChild>
-                <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+                <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
                   UI/UX
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className='w-80 bg-transparent backdrop-blur-sm'>
+              <HoverCardContent className='bg-transparent backdrop-blur-sm w-80'>
                 <div>
                   <Image
                     src={uiUxDesigner}
@@ -164,11 +158,11 @@ export default async function About() {
             and{' '}
             <HoverCard>
               <HoverCardTrigger asChild>
-                <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+                <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
                   Graphic Designer
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className='w-80 bg-transparent backdrop-blur-sm'>
+              <HoverCardContent className='bg-transparent backdrop-blur-sm w-80'>
                 <div>
                   <Image
                     src={graphicDesigner}
@@ -183,11 +177,11 @@ export default async function About() {
             based in Jakarta, with a background in{' '}
             <HoverCard>
               <HoverCardTrigger asChild>
-                <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+                <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
                   Information Systems
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className='w-80 bg-transparent backdrop-blur-sm'>
+              <HoverCardContent className='bg-transparent backdrop-blur-sm w-80'>
                 <div>
                   <Image
                     src={informationSystem}
@@ -200,7 +194,7 @@ export default async function About() {
               </HoverCardContent>
             </HoverCard>{' '}
             from Mercu Buana University. I specialize in creating seamless{' '}
-            <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               digital experiences
             </span>
             , blending my technical skills with a deep passion for design.
@@ -208,40 +202,40 @@ export default async function About() {
           <p>
             In my professional journey, I immerse myself in the creative world
             of{' '}
-            <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               UI/UX
             </span>{' '}
             and{' '}
-            <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               Graphic Design
             </span>
             . I take joy in crafting visually compelling and{' '}
-            <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               user-centric
             </span>{' '}
             interfaces, infusing each project with a unique blend of creativity
             and functionality. My experience at{' '}
             <HoverCard>
               <HoverCardTrigger asChild>
-                <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+                <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
                   Heulaula Studios
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className='w-80 bg-transparent backdrop-blur-sm'>
+              <HoverCardContent className='bg-transparent backdrop-blur-sm w-80'>
                 <div className='flex justify-between space-x-4'>
                   <Avatar>
                     <AvatarImage src='https://avatars.githubusercontent.com/u/132384789' />
                     <AvatarFallback>HS</AvatarFallback>
                   </Avatar>
                   <div className='space-y-1'>
-                    <h4 className='text-sm font-semibold'>Heulaula Studios</h4>
+                    <h4 className='font-semibold text-sm'>Heulaula Studios</h4>
                     <p className='text-sm'>
                       A tiny design outpost, embodies the futility of creative
                       endeavors. 🌏🥷
                     </p>
                     <div className='flex items-center pt-2'>
-                      <CalendarDays className='mr-2 h-4 w-4 opacity-70' />{' '}
-                      <span className='text-xs text-muted-foreground'>
+                      <CalendarDays className='opacity-70 mr-2 w-4 h-4' />{' '}
+                      <span className='text-muted-foreground text-xs'>
                         Joined December 2019
                       </span>
                     </div>
@@ -254,22 +248,22 @@ export default async function About() {
           </p>
           <p>
             For me, design is more than just a skill—it's a{' '}
-            <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               passion
             </span>
             . It’s where I find my{' '}
-            <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+            <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
               creative spark
             </span>
             ,{' '}
             <HoverCard>
               <HoverCardTrigger asChild>
-                <span className='bg-red-300/20 font-medium underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
+                <span className='bg-red-300/20 hover:bg-red-500 font-medium hover:text-white underline underline-offset-4 hover:underline decoration-2 decoration-red-500'>
                   turning abstract concepts into engaging and aesthetic
                   solutions.
                 </span>
               </HoverCardTrigger>
-              <HoverCardContent className='w-80 bg-transparent backdrop-blur-sm'>
+              <HoverCardContent className='bg-transparent backdrop-blur-sm w-80'>
                 <div>
                   <Image
                     src={menarik}
