@@ -71,15 +71,20 @@ export default async function About() {
     'https://storage.onindonesia.id/tazkiyaworks/public/about/gktm/MENARIK.gif';
 
   return (
-    <main className='flex flex-col items-center justify-center px-48'>
-      <div className='mt-10 flex flex-col items-center justify-center space-y-5'>
+    // <main className='flex flex-col justify-center items-center px-48'>
+    <main className='mx-5 flex flex-col items-center justify-center md:px-48'>
+      {/* TODO: RESPONSIVE CONTTENT */}
+      {/* <div className='flex flex-col justify-center items-center space-y-5 mt-10'> */}
+      <div className='mt-32 flex flex-col items-center justify-center space-y-5 md:mt-40'>
         {/* Badge here */}
         <StatusBadge />
-        <div className='flex flex-col items-center justify-center space-y-5 text-foreground'>
+        <div className='flex flex-col items-center justify-center space-y-10 text-foreground'>
+          {/* <h1 className='font-instrumentSerif text-9xl'> */}
           <h1 className='font-instrumentSerif text-9xl'>
             I'm Tazkiya Mujahid.
           </h1>
-          <p className='max-w-5xl text-center font-dmSans text-lg'>
+          {/* <p className='max-w-5xl font-dmSans text-center text-lg'> */}
+          <p className='text-left font-dmSans text-lg md:max-w-5xl md:text-center'>
             A designer of{' '}
             <span className='bg-red-300/20 underline decoration-red-500 decoration-2 underline-offset-4 hover:bg-red-500 hover:text-white hover:underline'>
               intuitive interfaces
@@ -99,7 +104,8 @@ export default async function About() {
             </span>{' '}
             into seamless user experiences.
           </p>
-          <p className='max-w-5xl text-center font-dmSans text-lg'>
+          {/* <p className='max-w-5xl font-dmSans text-center text-lg'> */}
+          <p className='text-left font-dmSans text-lg md:max-w-5xl md:text-center'>
             While you’re reading this, I’m listening to <Currently />, minding
             my own business waiting for you to hit me up, so enjoy your stay. I
             hope you’re having a great day and enjoying whatever you’re up to!
@@ -112,7 +118,7 @@ export default async function About() {
         </span>
       </div>
       <TechStack />
-      <div className='mx-auto my-20 flex flex-col items-start justify-start gap-5 text-left font-dmSans'>
+      <div className='mx-auto mb-10 mt-20 flex flex-col items-start justify-start gap-5 text-left font-dmSans'>
         <h1 className='text-4xl font-medium'>GTKM.</h1>
 
         <div className='flex flex-col gap-5 text-lg'>
