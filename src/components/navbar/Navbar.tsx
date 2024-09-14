@@ -5,6 +5,7 @@ import Routes from '@/src/components/navbar/routes/Routes';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isClick, setIsClick] = useState(false);
@@ -13,8 +14,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='z-50 mx-5 my-10 rounded-full bg-transparent shadow-sm ring-1 ring-black/5 backdrop-blur-sm'>
-      <div className='mx-auto px-10'>
+    // <nav className='z-50 border-2 bg-transparent shadow-sm backdrop-blur-sm mx-5 my-10 border-red-500 rounded-full ring-1 ring-black/5'>
+    // TODO: Responsive Navbar
+    <nav className='fixed right-0 z-50 w-full bg-transparent p-2 shadow-sm ring-1 ring-black/5 backdrop-blur-lg md:fixed md:left-0 md:top-1 md:mx-5 md:my-10 md:w-auto md:rounded-full md:p-0 md:backdrop-blur-sm'>
+      <div className='mx-auto px-4 md:px-10'>
         <div className='flex justify-between'>
           <div className='my-auto flex'>
             <div>
@@ -50,20 +53,26 @@ export default function Navbar() {
               onClick={toggleNavbar}
             >
               {isClick ? (
-                <X className='h-6 w-6 text-gray-500' />
+                <X className='h-6 w-6 text-foreground' />
               ) : (
-                <Menu className='h-6 w-6 text-gray-500' />
+                <Menu className='h-6 w-6 text-foreground' />
               )}
             </button>
           </div>
         </div>
       </div>
       {isClick && (
-        <div className='md:hidden'>
+        <motion.div
+          className='h-full md:hidden'
+          initial={{ opacity: 0, y: -50 }} // Start from above with opacity 0
+          animate={{ opacity: 1, y: 0 }} // Animate to visible and y=0
+          exit={{ opacity: 0, y: -50 }} // Exit by going back up
+          transition={{ duration: 0.3 }} // Smooth transition (0.3 seconds)
+        >
           <div className='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
             <Routes />
           </div>
-        </div>
+        </motion.div>
       )}
     </nav>
   );
