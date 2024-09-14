@@ -14,12 +14,10 @@ export default function Navbar() {
   };
 
   return (
-    // <nav className='z-50 border-2 bg-transparent shadow-sm backdrop-blur-sm mx-5 my-10 border-red-500 rounded-full ring-1 ring-black/5'>
-    // TODO: Responsive Navbar
-    <nav className='fixed right-0 z-50 w-full bg-transparent p-2 shadow-sm ring-1 ring-black/5 backdrop-blur-lg md:fixed md:left-0 md:top-1 md:mx-5 md:my-10 md:w-auto md:rounded-full md:p-0 md:backdrop-blur-sm'>
+    <nav className='md:top-1 right-0 md:left-0 z-50 fixed md:fixed bg-transparent shadow-sm backdrop-blur-lg md:backdrop-blur-sm md:mx-5 md:my-10 p-2 md:p-0 md:rounded-full ring-1 ring-black/5 w-full md:w-auto'>
       <div className='mx-auto px-4 md:px-10'>
         <div className='flex justify-between'>
-          <div className='my-auto flex'>
+          <div className='flex my-auto'>
             <div>
               <Link href='/' className='flex items-center px-2 py-2'>
                 <svg
@@ -44,7 +42,7 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          <div className='hidden items-center space-x-1 md:flex'>
+          <div className='md:flex items-center space-x-1 hidden'>
             <Routes />
           </div>
           <div className='flex items-center md:hidden'>
@@ -53,9 +51,9 @@ export default function Navbar() {
               onClick={toggleNavbar}
             >
               {isClick ? (
-                <X className='h-6 w-6 text-foreground' />
+                <X className='w-6 h-6 text-foreground' />
               ) : (
-                <Menu className='h-6 w-6 text-foreground' />
+                <Menu className='w-6 h-6 text-foreground' />
               )}
             </button>
           </div>
@@ -63,13 +61,13 @@ export default function Navbar() {
       </div>
       {isClick && (
         <motion.div
-          className='h-full md:hidden'
+          className='md:hidden h-full'
           initial={{ opacity: 0, y: -50 }} // Start from above with opacity 0
           animate={{ opacity: 1, y: 0 }} // Animate to visible and y=0
           exit={{ opacity: 0, y: -50 }} // Exit by going back up
           transition={{ duration: 0.3 }} // Smooth transition (0.3 seconds)
         >
-          <div className='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
+          <div className='space-y-1 px-2 sm:px-3 pt-2 pb-3'>
             <Routes />
           </div>
         </motion.div>
