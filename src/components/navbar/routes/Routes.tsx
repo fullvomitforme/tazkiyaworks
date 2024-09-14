@@ -22,13 +22,15 @@ export default function Routes() {
   ];
 
   return (
+    // TODO: Responsive Navbar
+    // <div className='flex md:flex-row flex-col justify-center items-center md:space-x-10 space-y-5 md:space-y-0 p-4 font-dmSans'>
     <div className='flex flex-col items-center justify-center space-y-5 p-4 font-dmSans md:flex-row md:space-x-10 md:space-y-0'>
       {routes.map((route) => (
         <Link
           key={route.label}
           href={route.href}
           className={clsx(
-            'w-full rounded-full px-3 py-1 text-center text-base font-medium uppercase tracking-wide transition-all duration-200 ease-in-out hover:bg-zinc-800 hover:text-white',
+            'w-full rounded-full px-3 py-1 text-left text-base font-medium uppercase tracking-wide transition-all duration-200 ease-in-out hover:bg-zinc-800 hover:text-white md:text-center',
             {
               'bg-zinc-800 text-white': route.active,
             }
