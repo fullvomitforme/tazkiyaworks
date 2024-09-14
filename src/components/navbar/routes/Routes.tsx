@@ -28,7 +28,7 @@ export default function Routes() {
           key={route.label}
           href={route.href}
           className={clsx(
-            'w-full rounded-full px-3 py-1 text-center text-base font-medium uppercase tracking-wide transition-all duration-200 ease-in-out hover:bg-zinc-800 hover:text-white',
+            'w-full rounded-full px-3 py-1 text-left text-base font-medium uppercase tracking-wide transition-all duration-200 ease-in-out hover:bg-zinc-800 hover:text-white md:text-center',
             {
               'bg-zinc-800 text-white': route.active,
             }
