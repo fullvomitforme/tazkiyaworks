@@ -22,8 +22,6 @@ export default function Routes() {
   ];
 
   return (
-    // TODO: Responsive Navbar
-    // <div className='flex md:flex-row flex-col justify-center items-center md:space-x-10 space-y-5 md:space-y-0 p-4 font-dmSans'>
     <div className='flex flex-col items-center justify-center space-y-5 p-4 font-dmSans md:flex-row md:space-x-10 md:space-y-0'>
       {routes.map((route) => (
         <Link
