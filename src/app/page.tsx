@@ -21,6 +21,8 @@ import {
 
 import Image from 'next/image';
 
+import Footer from '@/src/components/footer/Footer';
+
 const Currently = async () => {
   noStore();
   const { data: song } = await getLastPlayed();
@@ -71,7 +73,7 @@ export default async function About() {
     'https://storage.onindonesia.id/tazkiyaworks/public/about/gktm/MENARIK.gif';
 
   return (
-    <main className='flex flex-col justify-center items-center mx-5 md:px-48'>
+    <main className='flex flex-col justify-center items-center mx-5 md:px-36'>
       <div className='flex flex-col justify-center items-center space-y-5 mt-32 md:mt-40'>
         {/* Badge here */}
         <StatusBadge />
@@ -279,6 +281,7 @@ export default async function About() {
         </div>
       </div>
       <RecentWork />
+      <Footer />
     </main>
   );
 }
