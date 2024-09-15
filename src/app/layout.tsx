@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import { Instrument_Serif } from 'next/font/google';
-import '@/src/styles/globals.css';
 import Navbar from '@/src/components/navbar/Navbar';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { cn } from '@/src/lib/utils';
@@ -9,6 +8,7 @@ import Cursor from '@/src/components/ui/sticky-cursor';
 import SplashScreen from '../components/ui/SplashScreen'; 
 import SmoothScrolling from '../components/ui/SmoothScrolling';
 import UmamiProvider from 'next-umami';
+import '@/src/styles/globals.css';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -46,6 +46,7 @@ export default function RootLayout({
         <SplashScreen />
         <Navbar />
         <SmoothScrolling>{children}</SmoothScrolling>
+        {/* {children} */}
         <SpeedInsights />
         <div className='noise'></div>
       </body>
