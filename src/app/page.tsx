@@ -9,7 +9,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
   MusicCard,
-} from '@/src/components/ui/hover-card';
+} from '@/src/components/ui/card/hover-card';
 
 import { CalendarDays } from 'lucide-react';
 
