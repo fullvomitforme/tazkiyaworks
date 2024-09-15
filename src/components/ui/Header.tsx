@@ -1,3 +1,5 @@
+'use client';
+
 import { RightArrow } from '../ui/arrow';
 import { CardsContext } from '@/src/app/cardsContext';
 import { ReactNode, useContext } from 'react';

@@ -92,6 +92,6 @@ const works: WorkData[] = [
   },
 ];
 
-let worksReversed = works.toReversed();
+let worksReversed = works.slice().reverse();
 
 export { works, worksReversed };
