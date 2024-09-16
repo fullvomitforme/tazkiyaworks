@@ -1,13 +1,7 @@
 .workwrap {
-  position: relative;
   width: 100vw;
-  min-height: 120vh;
+  min-height: 100vh;
   overflow: hidden;
-}
-
-/* Ensure any absolutely positioned children can exceed the bounds of workwrap */
-.workwrap > * {
-  position: absolute;
 }
 
 .header {

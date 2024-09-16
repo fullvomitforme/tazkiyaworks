@@ -9,89 +9,99 @@ interface WorkData {
   url: string;
 }
 
-const works: WorkData[] = [
+interface WorksExperience {
+  company: string;
+  position: string;
+  year: string;
+  url: string;
+}
+
+const worksExperience: WorksExperience[] = [
   {
-    img_url: '/work/onmarket/onmarket-card.png',
-    id: 'onmarket.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/onmarket',
+    company: 'TazkiyaWorks',
+    position: 'UI/UX Designer',
+    year: '2023 - Present',
+    url: 'works/portfolio',
   },
   {
-    img_url: '/work/onmarket/ondelivery-card.png',
-    id: 'ondelivery.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/ondelivery',
+    company: 'Ecommerce App',
+    position: 'Web Developer',
+    year: '2022 - 2023',
+    url: 'works/portfolio',
   },
   {
-    img_url: '/work/onmarket/onmarket-card.png',
-    id: 'onmarket.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/onmarket',
+    company: 'OnSunshine',
+    position: 'Mobile App Developer',
+    year: '2024 - Present',
+    url: 'works/portfolio',
   },
   {
-    img_url: '/work/onmarket/ondelivery-card.png',
-    id: 'ondelivery.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/ondelivery',
+    company: 'Poster Design',
+    position: 'Graphic Designer',
+    year: '2021 - 2022',
+    url: 'works/portfolio',
   },
   {
-    img_url: '/work/onmarket/onmarket-card.png',
-    id: 'onmarket.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/onmarket',
-  },
-  {
-    img_url: '/work/onmarket/ondelivery-card.png',
-    id: 'ondelivery.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/ondelivery',
-  },
-  {
-    img_url: '/work/onmarket/onmarket-card.png',
-    id: 'onmarket.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/onmarket',
-  },
-  {
-    img_url: '/work/onmarket/ondelivery-card.png',
-    id: 'ondelivery.id',
-    external: false,
-    year: '2024',
-    category: 'ui/ux design',
-    width: 500 / 1.5,
-    height: 200 / 1.5,
-    url: '/works/ondelivery',
+    company: 'Corporate Website',
+    position: 'UI/UX Designer',
+    year: '2020 - 2021',
+    url: 'works/portfolio',
   },
 ];
 
-let worksReversed = works.slice().reverse();
+const works: WorkData[] = [
+  {
+    img_url: 'https://via.placeholder.com/400x300.png?text=Portfolio',
+    id: 'portfolio',
+    external: true,
+    year: '2023',
+    category: 'UI/UX Design',
+    width: 400,
+    height: 300,
+    url: 'https://tazkiyaworks.fun',
+  },
+  {
+    img_url: 'https://via.placeholder.com/450x300.png?text=Ecommerce+App',
+    id: 'ecommerce-app',
+    external: false,
+    year: '2022',
+    category: 'Web Development',
+    width: 450,
+    height: 300,
+    url: '/works/ecommerce',
+  },
+  {
+    img_url: 'https://via.placeholder.com/380x250.png?text=Attendance+App',
+    id: 'attendance-app',
+    external: true,
+    year: '2024',
+    category: 'Mobile App',
+    width: 380,
+    height: 250,
+    url: 'https://onsunshine.app',
+  },
+  {
+    img_url: 'https://via.placeholder.com/350x450.png?text=Poster+Design',
+    id: 'poster-design',
+    external: false,
+    year: '2021',
+    category: 'Graphic Design',
+    width: 350,
+    height: 450,
+    url: '/works/poster-design',
+  },
+  {
+    img_url: 'https://via.placeholder.com/500x400.png?text=Corporate+Website',
+    id: 'corporate-website',
+    external: false,
+    year: '2020',
+    category: 'UI/UX Design',
+    width: 500,
+    height: 400,
+    url: '/works/corporate-website',
+  },
+];
 
-export { works, worksReversed };
+let worksReversed = works.reverse();
+
+export { works, worksReversed, worksExperience };

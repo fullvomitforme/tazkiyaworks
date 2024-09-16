@@ -6,6 +6,7 @@ import { useState, useEffect, useRef, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { RightArrow, UpRightArrow } from '@/src/components/ui/arrow';
 import { CardsContext } from '@/src/app/cardsContext';
+import '@/src/styles/works.css';
 
 export default function WorkCards() {
   const [screen, setScreen] = useState<Window | undefined>(undefined);
@@ -51,6 +52,15 @@ export default function WorkCards() {
     return positionsRef.current[index];
   };
 
+  console.log('screen', screen);
+  console.log('loading', loading);
+  console.log('positionsRef', positionsRef);
+  console.log('zIndices', zIndices);
+  console.log('focusedCard', focusedCard);
+
+  console.log('handleImageClick', handleImageClick);
+  console.log('getRandomPosition', getRandomPosition);
+
   return !loading
     ? worksReversed.map((item, index) => {
         if (screen === undefined) return null;
@@ -65,8 +75,8 @@ export default function WorkCards() {
 
         return (
           <motion.div
-            key={item.img_url}
-            className='card-container'
+            key={item.id}
+            className='card-container transition-transform duration-300 ease-in-out hover:-translate-y-2'
             drag
             dragMomentum={false}
             style={{

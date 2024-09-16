@@ -47,7 +47,7 @@ export default function RecentWork() {
       </h1>
       <div className='group relative hidden items-center justify-center md:inline-flex'>
         <Link
-          href='/work'
+          href='/works'
           className='absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-75 group-hover:opacity-100'
         >
           <button className='flex flex-row items-center justify-center space-x-2 rounded-full bg-zinc-600/50 px-6 py-2 font-dmSans text-white backdrop-blur-sm transition-colors hover:bg-zinc-600/60'>
