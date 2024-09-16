@@ -9,16 +9,8 @@ export default function Routes() {
 
   const routes = [
     { label: 'Work', href: '/works', active: pathname === '/works' },
-    {
-      label: 'Resume',
-      href: 'https://tazkiyamujahid.notion.site/Tazkiya-Anafsi-Al-Mujahid-Resume-da37e36e6635439da6f41a64ffa02e00?pvs=4',
-    },
     { label: 'Blog', href: '/blog', active: pathname === '/blog' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tazkiya-mujahid/' },
-    {
-      label: 'Email',
-      href: 'mailto:tazkiyadigitalarchive@gmail.com?subject=Hello%20Tazkiya!',
-    },
+    { label: 'Contact', href: '/contact', active: pathname === '/contact' },
   ];
 
   return (
