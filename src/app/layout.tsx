@@ -8,6 +8,8 @@ import Cursor from '@/src/components/ui/sticky-cursor';
 import SplashScreen from '../components/ui/SplashScreen'; 
 import SmoothScrolling from '../components/ui/SmoothScrolling';
 import UmamiProvider from 'next-umami';
+import { Suspense } from 'react';
+import Loading from './loading';
 import '@/src/styles/globals.css';
 
 const dmSans = DM_Sans({
@@ -41,11 +43,13 @@ export default function RootLayout({
         <UmamiProvider websiteId='2137f71a-6969-41a3-a928-4925dd3dfe12' />
       </head>
       <body className={cn('', dmSans.variable, instrumentSerif.variable)}>
-        <div className='bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] -z-10 fixed inset-0 bg-white bg-[size:6rem_4rem] bg-repeat w-full h-full'></div>
+        <div className='fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] bg-repeat'></div>
         <Cursor />
         <SplashScreen />
         <Navbar />
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <Suspense fallback={<Loading />}>
+          <SmoothScrolling>{children}</SmoothScrolling>
+        </Suspense>
         {/* {children} */}
         <SpeedInsights />
         <div className='noise'></div>
