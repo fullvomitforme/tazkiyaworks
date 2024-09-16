@@ -25,7 +25,7 @@ export default function LoadingScreen() {
 
   return (
     <div
-      className={`splashscreen fixed inset-0 flex flex-col items-center justify-center bg-white transition-opacity duration-500 ${
+      className={`fixed inset-0 flex flex-col items-center justify-center bg-white transition-opacity duration-500 ${
         isVisible ? 'opacity-100' : 'pointer-events-none opacity-0'
       }`}
     >
