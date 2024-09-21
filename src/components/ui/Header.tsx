@@ -31,9 +31,13 @@ export default function Header() {
 
   return (
     <div className='header'>
-      <div className='flex flex-row gap-24'>
-        <div className='header-card works-index-container -rotate-1'>
+      <div className='flex flex-row gap-24 rotate-2'>
+        <div className='font-medium header-card works-index-container'>
           <div className='flex flex-row pt-2'>
+            <div className='flex flex-row justify-center items-center gap-2 p-5'>
+              <h1 className='font-semibold'>Hover This</h1>
+              <RightArrow />
+            </div>
             <div className='works-index'>
               {works.slice(0, 9).map((work) => {
                 return (

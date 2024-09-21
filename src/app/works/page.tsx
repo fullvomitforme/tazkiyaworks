@@ -9,6 +9,7 @@ import { CardsContext, defaultFocusedCard } from '@/src/app/cardsContext';
 import WorkInProgress from '@/src/components/work-in-progress/work-in-progress';
 import { worksExperience } from '@/src/lib/works';
 import Link from 'next/link';
+import Footer from '@/src/components/footer/Footer';
 
 export default function Home() {
   const [focusedCard, setFocusedCard] = useState<string | null>(
@@ -17,31 +18,35 @@ export default function Home() {
 
   return (
     <motion.div
-      className='workwrap overflow-x-hidden'
+      className='overflow-x-hidden workwrap'
       onHoverStart={() => setFocusedCard(null)}
     >
       <CardsContext.Provider value={{ focusedCard, setFocusedCard }}>
+        <div className='top-40 right-52 absolute'>
+          <Header />
+        </div>
         <Cards />
-        <div className='z-auto mx-auto mt-40 flex flex-col items-center justify-center text-center'>
-          <h1 className='mb-10 text-left font-instrumentSerif text-9xl'>
+        <div className='z-auto flex flex-col justify-center items-start mx-40 mt-40 mb-10 text-center'>
+          <h1 className='mb-10 font-instrumentSerif text-9xl text-left'>
             Work Experience
           </h1>
           {worksExperience.map((work) => (
             <div className='w-full max-w-2xl'>
               <Link
                 href={work.url}
-                className='block rounded-lg border border-transparent p-4 font-dmSans transition-all duration-300 ease-in-out hover:border-gray-300 hover:bg-transparent hover:backdrop-blur-md'
+                className='block hover:border-gray-300 hover:bg-transparent hover:backdrop-blur-md p-4 border border-transparent rounded-lg font-dmSans transition-all duration-300 ease-in-out'
               >
-                <div className='flex items-center justify-between'>
-                  <h2 className='text-xl font-semibold'>{work.company}</h2>
-                  <p className='text-lg text-gray-500'>{work.year}</p>
+                <div className='flex justify-between items-center'>
+                  <h2 className='font-semibold text-xl'>{work.company}</h2>
+                  <p className='text-gray-500 text-lg'>{work.year}</p>
                 </div>
-                <p className='mt-2 text-left text-gray-600'>{work.position}</p>
+                <p className='mt-2 text-gray-600 text-left'>{work.position}</p>
               </Link>
             </div>
           ))}
         </div>
-        <Header />
+        
+        {/* <Footer /> */}
       </CardsContext.Provider>
     </motion.div>
   );

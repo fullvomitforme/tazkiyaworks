@@ -52,14 +52,14 @@ export default function WorkCards() {
     return positionsRef.current[index];
   };
 
-  console.log('screen', screen);
-  console.log('loading', loading);
-  console.log('positionsRef', positionsRef);
-  console.log('zIndices', zIndices);
-  console.log('focusedCard', focusedCard);
+  // console.log('screen', screen);
+  // console.log('loading', loading);
+  // console.log('positionsRef', positionsRef);
+  // console.log('zIndices', zIndices);
+  // console.log('focusedCard', focusedCard);
 
-  console.log('handleImageClick', handleImageClick);
-  console.log('getRandomPosition', getRandomPosition);
+  // console.log('handleImageClick', handleImageClick);
+  // console.log('getRandomPosition', getRandomPosition);
 
   return !loading
     ? worksReversed.map((item, index) => {
@@ -76,7 +76,7 @@ export default function WorkCards() {
         return (
           <motion.div
             key={item.id}
-            className='card-container transition-transform duration-300 ease-in-out hover:-translate-y-2'
+            className='transition-transform hover:-translate-y-2 duration-300 card-container ease-in-out'
             drag
             dragMomentum={false}
             style={{
@@ -104,7 +104,11 @@ export default function WorkCards() {
                 style={{ borderRadius: 6 }}
               />
               <div className='card-header'>
-                <a className='card-link card-name' href={item.url}>
+                <a
+                  className='card-link card-name'
+                  href={item.url}
+                  target='_blank'
+                >
                   <span>{item.id}</span>
                   {item.external ? <UpRightArrow /> : <RightArrow />}
                 </a>
