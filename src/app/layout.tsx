@@ -11,6 +11,7 @@ import UmamiProvider from 'next-umami';
 import { Suspense } from 'react';
 import Loading from './loading';
 import '@/src/styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -29,6 +30,28 @@ export const metadata: Metadata = {
   description: 'Personal Site of Tazkiya Mujahid',
   icons: {
     icon: '/favicon/favicon.svg',
+  },
+  openGraph: {
+    title: 'Tazkiya Works',
+    description: 'Personal Site of Tazkiya Mujahid',
+    url: 'https://tazkiyaworks.fun/',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'TazkiyaWorks',
+    images: [
+      {
+        url: 'https://storage.onindonesia.id/tazkiyaworks/public/og/og-card.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tazkiya Works',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@tazkiyaworks',
+    creator: '@yaakiyaaa',
+    images: 'https://storage.onindonesia.id/tazkiyaworks/public/og/og-card.jpg',
   },
 };
 
@@ -50,9 +73,9 @@ export default function RootLayout({
         <Suspense fallback={<Loading />}>
           <SmoothScrolling>{children}</SmoothScrolling>
         </Suspense>
-        {/* {children} */}
-        <SpeedInsights />
         <div className='noise'></div>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
