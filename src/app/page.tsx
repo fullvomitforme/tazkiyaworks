@@ -35,7 +35,7 @@ import Footer from '@/src/components/footer/Footer';
 const Currently = async () => {
   noStore();
   const { data: song } = await getLastPlayed();
-
+  console.log(song);
   const recent = song.is_playing ? song.item : song.items[0].track;
   const track = {
     title: recent.name,
