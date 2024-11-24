@@ -112,8 +112,9 @@ export default async function About() {
           </p>
           <p className='text-left font-dmSans text-lg md:max-w-5xl md:text-center'>
             While you’re reading this, I’m listening to <Currently />, minding
-            my own business waiting for you to hit me up, so enjoy your stay. I
-            hope you’re having a great day and enjoying whatever you’re up to!
+            my own fucking business waiting for you to hit me up, so enjoy your
+            stay. I hope you’re having a great day and enjoying whatever you’re
+            up to!
           </p>
         </div>
       </div>
