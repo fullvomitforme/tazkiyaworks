@@ -22,7 +22,12 @@ const getAccessToken = async () => {
   });
 
   const data = await response.json();
-  // console.log(data);
+  console.log('-----------------');
+  console.log(data);
+  console.log(REFRESH_TOKEN);
+  console.log(BASIC);
+  console.log('-----------------');
+
 
   return data.access_token as string;
 };
