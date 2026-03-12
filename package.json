@@ -25,7 +25,6 @@
     "lenis": "^1.1.13",
     "lucide-react": "^0.302.0",
     "next": "^15.0.0-rc.0",
-    "next-umami": "^0.0.4",
     "react": "^19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "^19.0.0-rc-fb9a90fa48-20240614",
     "react-draggable": "^4.4.6",
