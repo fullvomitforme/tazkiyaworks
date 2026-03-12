@@ -111,7 +111,7 @@ export default async function About() {
             into seamless user experiences.
           </p>
           <p className='text-left font-dmSans text-lg md:max-w-5xl md:text-center'>
-            While you’re reading this, I’m listening to <Currently />, minding
+            While you’re reading this, I’m listening to The Strokes, minding
             my own fucking business waiting for you to hit me up, so enjoy your
             stay. I hope you’re having a great day and enjoying whatever you’re
             up to!
