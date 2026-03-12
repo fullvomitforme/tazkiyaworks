@@ -72,7 +72,7 @@ export default function SplashScreen() {
         </motion.p>
       </div>
       <div className='credits absolute left-0 mb-20 flex w-full items-center justify-center py-4 font-dmSans font-medium'>
-        <p className='text-sm'>Tazkiya Works © 2024</p>
+        <p className='text-sm'>Tazkiya Works © {new Date().getFullYear()}</p>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export default function Footer() {
         </Suspense>
         .
       </h2>
-      <p className='text-sm font-medium'>Tazkiya Works © 2024</p>
+      <p className='text-sm font-medium'>Tazkiya Works © {new Date().getFullYear()}</p>
     </div>
   );
 }
