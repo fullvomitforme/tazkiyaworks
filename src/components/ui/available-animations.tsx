@@ -1,4 +1,10 @@
-const AnimatedSVG = () => (
+type AnimatedSVGProps = {
+  available?: boolean;
+};
+
+const AnimatedSVG = ({ available = true }: AnimatedSVGProps) => {
+  const color = available ? '#15FF5B' : '#ef4444';
+  return (
   <svg
     width='15'
     height='15'
@@ -13,7 +19,7 @@ const AnimatedSVG = () => (
       y='9.375'
       rx='5.625'
       ry='5.625'
-      fill='#15FF5B' // Solid green
+      fill={color}
     />
 
     {/* Layer 2 (Breathing Animation) */}
@@ -24,7 +30,7 @@ const AnimatedSVG = () => (
       y='6'
       rx='9'
       ry='9'
-      fill='#15FF5B' // Lighter green
+      fill={color}
       opacity='0.3'
     >
       <animate
@@ -59,6 +65,7 @@ const AnimatedSVG = () => (
       />
     </rect>
   </svg>
-);
+  );
+};
 
 export default AnimatedSVG;
