@@ -5,7 +5,7 @@ export default function StatusBadge() {
   return (
     <div className='flex flex-row items-center justify-between space-x-1 rounded-full bg-zinc-600/50 px-5 py-1 font-dmSans text-white shadow-sm backdrop-blur-sm transition-colors hover:bg-zinc-600/60'>
       <div className='flex items-center'>
-        <AnimationAvailable />
+        <AnimationAvailable available={false} />
       </div>
       <h1>Currently unavailable</h1>
     </div>

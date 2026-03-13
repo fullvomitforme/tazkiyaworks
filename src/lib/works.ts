@@ -18,9 +18,15 @@ interface WorksExperience {
 
 const worksExperience: WorksExperience[] = [
   {
+    company: 'KB Valbury Sekuritas',
+    position: 'Frontend Developer',
+    year: '2025 - Present',
+    url: 'works/kb-valbury-sekuritas-frontend-developer',
+  },
+  {
     company: 'On Indonesia',
     position: 'UI/UX Designer',
-    year: '2024 - Present',
+    year: '2024 - 2025',
     url: 'works/onindonesia-ui-ux',
   },
   {
