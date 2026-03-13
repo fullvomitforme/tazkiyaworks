@@ -7,7 +7,7 @@ export default function StatusBadge() {
       <div className='flex items-center'>
         <AnimationAvailable />
       </div>
-      <h1>Available for work</h1>
+      <h1>Currently unavailable</h1>
     </div>
   );
 }
